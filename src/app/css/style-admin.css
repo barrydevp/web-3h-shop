@@ -1,0 +1,38 @@
+.summary {}
+
+.summary table {
+    text-align: center;
+}
+
+.summary th {
+    text-align: center;
+}
+
+.summary button[type="submit"] {
+    height: 35px;
+    margin: 0px 0px 0px 15px;
+}
+
+.summary input[type="text"] {
+    height: 35px;
+}
+
+.summary .product-quantity {
+    text-align: center;
+}
+
+.summary .product-active {
+    width: 12% !important;
+}
+
+form.form-edit {
+	height: auto;
+}
+
+form.form-edit input[type="submit"] {
+	width: 12%;
+	background-color: #44bd32;
+	border-radius: 2px;
+	padding: 5px;
+	margin-top: 25px;
+}

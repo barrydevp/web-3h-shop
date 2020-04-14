@@ -1,0 +1,77 @@
+.cart-area {
+    padding: 50px 0px;
+}
+
+.shopping-cart-table {}
+
+table.shopping-cart-table th,
+.shopping-cart-table td {
+    padding: 10px;
+    vertical-align: middle!important;
+}
+
+
+
+table.shopping-cart-table th {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+table.shopping-cart-table td {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+table.shopping-cart-table td.product-thumbnail {
+    min-width: 150px;
+}
+
+table.shopping-cart-table td.product-thumbnail a img {
+    max-width: 100px;
+}
+
+table.shopping-cart-table td.product-name {
+    min-width: 180px;
+}
+
+table.shopping-cart-table td.product-quantity input[type="number"] {
+    max-width: 60px;
+    text-align: center;
+    height: 40px;
+    border-radius: 0;
+    border: 1px solid #000;
+}
+
+table.shopping-cart-table td.product-discount input[type="text"] {
+    max-width: 90px;
+    text-align: center;
+    height: 40px;
+    border-radius: 0;
+    padding: 0px 10px;
+    border: 1px solid #000;
+}
+
+
+table.shopping-cart-table td.product-name a {
+    font-weight: 500;
+    text-decoration: none;
+}
+
+table.shopping-cart-table td.product-price span,
+table.shopping-cart-table td.product-subtotal span {
+    font-weight: 600;
+    color: #535353;
+}
+
+
+/**/
+
+.banner-pay {
+    width: 100%;
+    padding: 20px;
+}
+
+.banner-pay img {
+    width: 85%;
+}

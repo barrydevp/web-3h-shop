@@ -1,0 +1,26 @@
+.error-area {
+	padding: 45px 0px;
+}
+
+.error-area .title-error {}
+
+.error-area .title-error h1 {
+    font-size: 200px;
+    color: #f82e56;
+    font-weight: 900;
+    letter-spacing: 10px;
+    line-height: 1.1;
+    margin: 0 0 30px;
+}
+
+.error-area .content-error {}
+
+.error-area .content-error p {}
+
+.error-area .footer-error {
+	padding: 35px 0px;
+}
+
+.error-area .footer-error a {
+	padding: 10px 15px;
+}

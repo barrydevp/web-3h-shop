@@ -1,0 +1,379 @@
+/**/
+.header-area .header-top-area {
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.header-top-area .welcome {}
+
+.header-top-area ul.login-register {}
+
+.header-top-area ul.login-register li {
+    float: left;
+    padding: 0px 5px;
+}
+
+.header-top-area ul.login-register li a {
+    color: #f82e56;
+}
+
+/**/
+.header-middle-area {}
+
+.header-middle-area .stie-logo {}
+
+
+.header-middle-area .header-search {
+    background-color: #eef1fa;
+    border-radius: 25px;
+    max-width: 100%;
+    padding-left: 10px;
+    margin-top: 30px;
+}
+
+
+.header-search .category-select {
+    width: 30%;
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    height: 45px;
+    line-height: 45px;
+    min-width: 180px;
+    padding-right: 3px;
+}
+
+.header-search .category-select select.nice-select-menu {
+    background-color: #eef1fa;
+    border-radius: 25px;
+    font-size: 14px;
+    min-width: 180px;
+    padding: 0px 10px;
+    text-align: left;
+}
+
+
+.header-search .category-select select.nice-select-menu option {}
+
+.header-search-form {
+    width: 70%;
+    display: inline-block;
+    height: 45px;
+    line-height: 45px;
+}
+
+
+.header-search-form input[type="text"] {
+    outline: none;
+    width: 75%;
+    height: 30px;
+    padding-right: 130px;
+    border: none;
+    border-left: 1px solid black;
+    padding: 3px 15px;
+    overflow: hidden;
+}
+
+
+.header-search-form input[type="submit"] {
+    width: 24%;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.header-middle-area .shop-cart-menu {
+    margin-top: 30px;
+    font-size: 20px;
+    text-align: right;
+}
+
+.header-middle-area .shop-cart-menu li {
+    float: left;
+    list-style: none;
+    padding: 0px 3px;
+    margin: 0px 10px;
+}
+
+.header-middle-area .shop-cart-menu li a {
+    color: black;
+    text-decoration: none;
+}
+
+
+
+/**/
+.header-bottom-area {}
+
+.main-menu {
+    border-radius: 0px;
+    min-height: 60px;
+    margin-bottom: 0px;
+}
+
+.main-menu {
+    background-color: #1c3144e8;
+}
+
+
+.navbar.main-menu .navbar-brand {
+    padding: 0 25px;
+    height: 80px;
+    line-height: 80px;
+}
+
+.navbar.main-menu .navbar-toggle {
+    /* (80px - button height 34px) / 2 = 23px */
+    margin-top: 23px;
+    padding: 9px 10px !important;
+}
+
+@media (min-width: 768px) {
+    .navbar.main-menu .navbar-nav>li>a {
+        /* (80px - line-height of 27px) / 2 = 26.5px */
+        padding-top: 26.5px;
+        padding-bottom: 26.5px;
+        line-height: 27px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+.main-menu a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.main-menu a.navbar-brand: hover {
+    color: #fff;
+}
+
+.navbar.main-menu li {}
+
+
+.navbar.main-menu li.icon-flash {}
+
+.navbar.main-menu li>a:hover,
+.navbar.main-menu li>a:focus {
+    background-color: #ff3400e8;
+    color: #fff;
+}
+
+/**/
+
+#sticky-header .hotline {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    padding-left: 15px;
+    padding-top: 12px;
+    height: 80px;
+}
+
+
+
+#sticky-header .hotline .hotline-icon,
+.hotline .hotline-number {
+    display: inline-block;
+}
+
+#sticky-header .hotline .hotline-icon:hover,
+.hotline .hotline-number:hover
+{
+    color: #f82e56;
+}
+
+
+#sticky-header .hotline .hotline-icon {
+    font-size: 45px;
+    color: #fff;
+    margin-right: 15px;
+}
+
+
+#sticky-header .hotline-number {
+    color: white;
+    font-size: 15px;
+}
+
+
+#sticky-header .hotline-number span {
+    /* font-weight: bold; */
+    display: block;
+    line-height: 1.4;
+}
+
+
+#sticky-header .bag-cart {
+    display: none;
+}
+
+#sticky-header .bag-cart a {
+    text-decoration: none;
+    font-size: 25px;
+    line-height: 80px;
+    height: 65px;
+}
+
+#sticky-header .bag-cart a:hover {
+    text-decoration: none;
+    color: #f82e56;
+}
+
+/**/
+
+.brand-area .hearder-brand {
+    border-bottom: 3px solid rgb(14, 10, 10);
+}
+
+.brand-area .hearder-brand h1 {
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+.brand-area .container-fluid {
+    padding: 100px 0px 0px 0px;
+}
+
+
+.brand-area .footer-brand {
+    margin: 100px 0px 10px 0px;
+    padding: 15px 0px;
+    background-color: #273c75;
+}
+
+.brand-area .footer-brand .arrow {
+    height: 200px;
+    line-height: 200px;
+}
+
+
+.brand-area .footer-brand img {
+    max-height: 200px;
+}
+
+/**/
+
+.general-info {
+    margin: 40px 0px 50px 0px;
+    padding: 100px 0px;
+    /* border-top: 1px solid black; */
+    background-color: #f5f6fa;
+}
+
+.general-info .single-info-wrapper {}
+
+.general-info .single-info-wrapper {
+    padding-left: 20px;
+}
+
+.general-info .single-info-wrapper .title {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.general-info .single-info-wrapper .menu {}
+
+.general-info .single-info-wrapper .menu ul {}
+
+
+.general-info .single-info-wrapper .menu ul>li {}
+
+
+
+.general-info .single-info-wrapper .menu ul>li>a {
+    color: #555555;
+    text-decoration: none;
+    line-height: 30px;
+}
+
+.general-info .single-info-wrapper .menu ul>li>a:hover {
+    color: red;
+}
+
+
+
+
+
+
+/**/
+
+.contact {
+    background-color: #dcdde1;
+    height: 150px;
+}
+
+.contact .hotline {
+    padding: 40px 0px;
+    display: inline-block;
+    line-height: 50px;
+}
+
+.contact .icon {
+    font-size: 23px;
+    display: inline-block;
+    color: #192a56;
+}
+
+.contact .icon:hover {
+    display: inline-block;
+    color: #f82e56;
+}
+
+.contact hotline.icon {
+    color: #f82e56;
+    ;
+}
+
+.contact hotline.icon:hover {
+    color: #192a56;
+}
+
+
+.contact .hotline.hotline-support {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #f82e56;
+}
+
+.contact .hotline.hotline-number {
+    font-size: 23px;
+    font-weight: 600;
+    padding-left: 15px;
+    color: #192a56;
+}
+
+
+.contact .hotline span {
+    text-align: left;
+    display: block;
+    display: block;
+    line-height: 1.4;
+}
+
+/**/
+.footer-area {
+    padding: 50px 0px 0px 0px;
+}
+
+.footer-area .payment-accept {}
+
+.footer-area .copyright-text {
+    margin-bottom: 1.5em;
+}
+
+.footer-area .copyright-text p {
+    color: #3a3a3a;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-area .payment-accept ul {}
+
+.footer-area .payment-accept ul>li {
+    padding: 3px 5px;
+    display: inline-block;
+}

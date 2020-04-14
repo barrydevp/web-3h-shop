@@ -1,0 +1,8 @@
+.shop-sale-area {}
+
+.shop-sale-area .banner-vertical {}
+
+.shop-sale-area .banner-vertical img {
+    border: 1px solid;
+    border-right: none;
+}
