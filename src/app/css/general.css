@@ -5,9 +5,11 @@
     border-bottom: 1px solid #dee2e6;
 }
 
-.header-top-area .welcome {}
+.header-top-area .welcome {
+}
 
-.header-top-area ul.login-register {}
+.header-top-area ul.login-register {
+}
 
 .header-top-area ul.login-register li {
     float: left;
@@ -19,9 +21,11 @@
 }
 
 /**/
-.header-middle-area {}
+.header-middle-area {
+}
 
-.header-middle-area .stie-logo {}
+.header-middle-area .stie-logo {
+}
 
 
 .header-middle-area .header-search {
@@ -54,7 +58,8 @@
 }
 
 
-.header-search .category-select select.nice-select-menu option {}
+.header-search .category-select select.nice-select-menu option {
+}
 
 .header-search-form {
     width: 70%;
@@ -101,9 +106,9 @@
 }
 
 
-
 /**/
-.header-bottom-area {}
+.header-bottom-area {
+}
 
 .main-menu {
     border-radius: 0px;
@@ -129,7 +134,7 @@
 }
 
 @media (min-width: 768px) {
-    .navbar.main-menu .navbar-nav>li>a {
+    .navbar.main-menu .navbar-nav > li > a {
         /* (80px - line-height of 27px) / 2 = 26.5px */
         padding-top: 26.5px;
         padding-bottom: 26.5px;
@@ -146,17 +151,19 @@
     text-transform: uppercase;
 }
 
-.main-menu a.navbar-brand: hover {
+.main-menu a.navbar-brand:hover {
     color: #fff;
 }
 
-.navbar.main-menu li {}
+.navbar.main-menu li {
+}
 
 
-.navbar.main-menu li.icon-flash {}
+.navbar.main-menu li.icon-flash {
+}
 
-.navbar.main-menu li>a:hover,
-.navbar.main-menu li>a:focus {
+.navbar.main-menu li > a:hover,
+.navbar.main-menu li > a:focus {
     background-color: #ff3400e8;
     color: #fff;
 }
@@ -171,15 +178,13 @@
 }
 
 
-
 #sticky-header .hotline .hotline-icon,
 .hotline .hotline-number {
     display: inline-block;
 }
 
 #sticky-header .hotline .hotline-icon:hover,
-.hotline .hotline-number:hover
-{
+.hotline .hotline-number:hover {
     color: #f82e56;
 }
 
@@ -263,7 +268,8 @@
     background-color: #f5f6fa;
 }
 
-.general-info .single-info-wrapper {}
+.general-info .single-info-wrapper {
+}
 
 .general-info .single-info-wrapper {
     padding-left: 20px;
@@ -275,28 +281,26 @@
     margin-bottom: 20px;
 }
 
-.general-info .single-info-wrapper .menu {}
+.general-info .single-info-wrapper .menu {
+}
 
-.general-info .single-info-wrapper .menu ul {}
-
-
-.general-info .single-info-wrapper .menu ul>li {}
-
+.general-info .single-info-wrapper .menu ul {
+}
 
 
-.general-info .single-info-wrapper .menu ul>li>a {
+.general-info .single-info-wrapper .menu ul > li {
+}
+
+
+.general-info .single-info-wrapper .menu ul > li > a {
     color: #555555;
     text-decoration: none;
     line-height: 30px;
 }
 
-.general-info .single-info-wrapper .menu ul>li>a:hover {
+.general-info .single-info-wrapper .menu ul > li > a:hover {
     color: red;
 }
-
-
-
-
 
 
 /**/
@@ -324,8 +328,7 @@
 }
 
 .contact hotline.icon {
-    color: #f82e56;
-    ;
+    color: #f82e56;;
 }
 
 .contact hotline.icon:hover {
@@ -359,7 +362,8 @@
     padding: 50px 0px 0px 0px;
 }
 
-.footer-area .payment-accept {}
+.footer-area .payment-accept {
+}
 
 .footer-area .copyright-text {
     margin-bottom: 1.5em;
@@ -371,9 +375,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.footer-area .payment-accept ul {}
+.footer-area .payment-accept ul {
+}
 
-.footer-area .payment-accept ul>li {
+.footer-area .payment-accept ul > li {
     padding: 3px 5px;
     display: inline-block;
 }

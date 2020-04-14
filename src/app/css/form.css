@@ -17,7 +17,7 @@ textarea {
     box-shadow: none;
     font-size: 14px;
     color: #626262;
-    padding-left: 3px 10px;
+    padding-left: 3px;
 }
 
 input[type="submit"],
@@ -46,7 +46,6 @@ option {
     padding: 0px 2px 1px;
     color: #555555;
 }
-
 
 
 select {
@@ -114,9 +113,11 @@ select {
     padding: 15px 15px;
 }
 
-.cart .cart-body .cart-title {}
+.cart .cart-body .cart-title {
+}
 
-.cart .cart-body .cart-text {}
+.cart .cart-body .cart-text {
+}
 
 .cart .cart-footer {
     padding: 0px 25px 15px 15px;
@@ -152,7 +153,8 @@ select {
     /* width: 265px; */
 }
 
-.cart-sale {}
+.cart-sale {
+}
 
 .cart-sale .cart-body {
     padding: 0px 15px;
@@ -162,7 +164,7 @@ select {
     padding: 0px 0px;
 }
 
-.cart-sale .cart-body .cart-title>a {
+.cart-sale .cart-body .cart-title > a {
     padding: 0px;
     font-weight: normal;
 }
@@ -172,7 +174,8 @@ select {
     text-decoration: line-through;
 }
 
-.cart-sale .cart-body .cart-text {}
+.cart-sale .cart-body .cart-text {
+}
 
 
 .cart-sale .info-sale {
@@ -181,13 +184,15 @@ select {
     color: #fff;
 }
 
-.cart-sale .btn-cart {}
+.cart-sale .btn-cart {
+}
 
 .cart-sale .cart-footer {
     padding: 0px 0px 15px 0px;
 }
 
-.cart-sale .cart-footer a {}
+.cart-sale .cart-footer a {
+}
 
 .cart-sale .cart-footer h2 {
     color: #fff;
@@ -208,9 +213,10 @@ select {
     background-color: #eef1fa;
 }
 
-.cart-horizontal a {}
+.cart-horizontal a {
+}
 
-.cart-horizontal a>img {
+.cart-horizontal a > img {
     /* width: 100%; */
     max-height: 200px;
     min-height: 200px;
@@ -218,7 +224,8 @@ select {
     border: 1px solid #8395a7;
 }
 
-.cart-horizontal .cart-body .cart-title {}
+.cart-horizontal .cart-body .cart-title {
+}
 
 
 .cart-horizontal .cart-body .cart-text {
@@ -237,9 +244,11 @@ select {
     padding: 15px 0px 0px 0px;
 }
 
-.cart-horizontal .cart-footer h1 {}
+.cart-horizontal .cart-footer h1 {
+}
 
-.cart-horizontal .cart-footer h5 {}
+.cart-horizontal .cart-footer h5 {
+}
 
 .cart-horizontal .info-sale h2 {
     font-size: 25px;
@@ -290,12 +299,12 @@ select {
     /* display: inline-block; */
 }
 
-.pagination-pr ul>li {
+.pagination-pr ul > li {
     display: inline-block;
     margin: 0px;
 }
 
-.pagination-pr ul>li>a {
+.pagination-pr ul > li > a {
     text-decoration: none;
     display: block;
     font-size: 16px;
@@ -303,8 +312,8 @@ select {
     padding: 7px 13px;
 }
 
-.pagination-pr ul>li:hover a,
-.pagination-pr ul>li:active a {
+.pagination-pr ul > li:hover a,
+.pagination-pr ul > li:active a {
     background-color: #f5f6fa;
 }
 
@@ -377,7 +386,8 @@ select {
     font-size: 15px;
 }
 
-.form-info form {}
+.form-info form {
+}
 
 .form-info form input {
     width: 500px;
