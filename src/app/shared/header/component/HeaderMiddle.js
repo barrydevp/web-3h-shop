@@ -1,6 +1,6 @@
 import React from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faShoppingBasket} from '@fortawesome/free-solid-svg-icons'
+import {faShopify} from '@fortawesome/free-brands-svg-icons'
 import PropTypes from 'prop-types'
 
 function HeaderMiddle() {
@@ -35,7 +35,7 @@ function HeaderMiddle() {
                     <div className="col-lg-2 col-12">
                         <div className="shop-cart-menu pull-right">
                             <li><a href="#">
-                                <FontAwesomeIcon size="2x" icon={faShoppingBasket}/><sup>3</sup></a>
+                                <FontAwesomeIcon size="2x" icon={faShopify}/><sup>3</sup></a>
                             </li>
                         </div>
                     </div>

@@ -1,21 +1,26 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './app/css/animation.css'
-import './app/css/form.css'
-import './app/css/general.css'
-import './app/css/reset.css'
-import './app/css/style-admin.css'
-import './app/css/style-error.css'
-import './app/css/style-home.css'
-import './app/css/style-sale.css'
-import './app/css/style-shop.css'
-import './app/css/style-sign.css'
+import {Router} from 'react-router-dom'
+import getHistory from './store/getHistory'
+import './scss/app.scss'
+import './css/animation.css'
+import './css/form.css'
+import './css/general.css'
+import './css/reset.css'
+import './css/style-admin.css'
+import './css/style-error.css'
+import './css/style-home.css'
+import './css/style-sale.css'
+import './css/style-shop.css'
+import './css/style-sign.css'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(
     <React.StrictMode>
-        <App/>
+        <Router history={getHistory()}>
+            <App/>
+        </Router>
     </React.StrictMode>,
     document.getElementById('root')
 )
