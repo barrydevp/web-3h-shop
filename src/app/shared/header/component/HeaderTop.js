@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {Link} from 'react-router-dom'
 
 function HeaderTop() {
     return (
@@ -12,10 +13,10 @@ function HeaderTop() {
                         </div>
                     </div>
                     <div className="col-lg-9 col-md-7 col-12">
-                        <ul className="login-register pull-right clearfix">
-                            <li><a href="#">SIGN IN</a></li>
+                        <ul className="login-register float-right clearfix">
+                            <li><Link to="/login">SIGN IN</Link></li>
                             <li>Or</li>
-                            <li><a href="#">REGISTER</a></li>
+                            <li><Link to="/signup">REGISTER</Link></li>
                         </ul>
                     </div>
                 </div>

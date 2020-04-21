@@ -9,7 +9,7 @@ function Footer() {
                 <div className="row">
                     <div className="col-md-6 col-12 col-md-push-4">
                         <div className="copyright-text">
-                            <p> Nikado theme ideas & All image resources are copied.</p>
+                            <p> Copyright of 3h-Shop 2020.</p>
                         </div>
                     </div>
                 </div>

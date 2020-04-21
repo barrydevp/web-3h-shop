@@ -1,0 +1,355 @@
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+.header-area {
+    .header-top-area {
+        height: 45px;
+        line-height: 45px;
+        border-bottom: 1px solid #dee2e6;
+    }
+}
+
+.header-top-area {
+    ul.login-register {
+        li {
+            float: left;
+            padding: 0px 5px;
+
+            a {
+                color: #f82e56;
+            }
+        }
+    }
+}
+
+.header-middle-area {
+    .header-search {
+        background-color: #eef1fa;
+        border-radius: 25px;
+        max-width: 100%;
+        padding-left: 10px;
+        margin-top: 30px;
+    }
+
+    .shop-cart-menu {
+        margin-top: 30px;
+        font-size: 20px;
+        text-align: right;
+
+        li {
+            float: left;
+            list-style: none;
+            padding: 0px 3px;
+            margin: 0px 10px;
+
+            a {
+                color: black;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.header-search {
+    .category-select {
+        width: 30%;
+        background-color: transparent;
+        border-radius: 0;
+        border: none;
+        height: 45px;
+        line-height: 45px;
+        min-width: 180px;
+        padding-right: 3px;
+
+        select.nice-select-menu {
+            background-color: #eef1fa;
+            border-radius: 25px;
+            font-size: 14px;
+            min-width: 180px;
+            padding: 0px 10px;
+            text-align: left;
+        }
+    }
+}
+
+.header-search-form {
+    width: 70%;
+    display: inline-block;
+    height: 45px;
+    line-height: 45px;
+
+    input[type="text"] {
+        outline: none;
+        width: 75%;
+        height: 30px;
+        padding-right: 130px;
+        border-left: 1px solid black;
+        padding: 3px 15px;
+        overflow: hidden;
+    }
+
+    input[type="submit"] {
+        width: 24%;
+        font-size: 18px;
+        font-weight: 300;
+    }
+}
+
+.main-menu {
+    border-radius: 0px;
+    min-height: 60px;
+    margin-bottom: 0px;
+    background-color: #1c3144e8;
+
+    a {
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    a.navbar-brand {
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+.navbar.main-menu {
+    .navbar-brand {
+        padding: 0 25px;
+        height: 80px;
+        line-height: 80px;
+    }
+
+    .navbar-toggler {
+        margin-top: 23px;
+        padding: 9px 10px !important;
+    }
+
+    li {
+        > a {
+            &:hover {
+                background-color: #ff3400e8;
+                color: #fff;
+            }
+
+            &:focus {
+                background-color: #ff3400e8;
+                color: #fff;
+            }
+        }
+    }
+}
+
+#sticky-header {
+    .hotline {
+        border-left: 1px solid rgba(255, 255, 255, 0.2);
+        padding-left: 15px;
+        height: 80px;
+
+        .hotline-icon {
+            display: inline-block;
+            font-size: 45px;
+            color: #fff;
+            margin-right: 15px;
+
+            &:hover {
+                color: #f82e56;
+            }
+        }
+    }
+
+    .hotline-number {
+        color: white;
+        font-size: 15px;
+
+        span {
+            display: block;
+            line-height: 1.4;
+        }
+    }
+
+    .bag-cart {
+        display: none;
+
+        a {
+            text-decoration: none;
+            font-size: 25px;
+            line-height: 80px;
+            height: 65px;
+
+            &:hover {
+                text-decoration: none;
+                color: #f82e56;
+            }
+        }
+    }
+}
+
+.hotline {
+    .hotline-number {
+        display: inline-block;
+
+        &:hover {
+            color: #f82e56;
+        }
+    }
+}
+
+.brand-area {
+    .hearder-brand {
+        border-bottom: 3px solid rgb(14, 10, 10);
+
+        h1 {
+            font-size: 40px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+    }
+
+    .container-fluid {
+        padding: 100px 0px 0px 0px;
+    }
+
+    .footer-brand {
+        margin: 100px 0px 10px 0px;
+        padding: 15px 0px;
+        background-color: #273c75;
+
+        .arrow {
+            height: 200px;
+            line-height: 200px;
+        }
+
+        img {
+            max-height: 200px;
+        }
+    }
+}
+
+.general-info {
+    margin: 40px 0px 50px 0px;
+    padding: 100px 0px;
+    background-color: #f5f6fa;
+
+    .single-info-wrapper {
+        padding-left: 20px;
+
+        .title {
+            font-size: 25px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .menu {
+            ul {
+                > li {
+                    > a {
+                        color: #555555;
+                        text-decoration: none;
+                        line-height: 30px;
+
+                        &:hover {
+                            color: red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contact {
+    background-color: #dcdde1;
+    height: 150px;
+
+    .hotline {
+        padding: 40px 0px;
+        display: inline-block;
+        line-height: 50px;
+
+        span {
+            text-align: left;
+            display: block;
+            line-height: 1.4;
+        }
+    }
+
+    .icon {
+        font-size: 23px;
+        display: inline-block;
+        color: #192a56;
+
+        &:hover {
+            display: inline-block;
+            color: #f82e56;
+        }
+    }
+
+    hotline.icon {
+        color: #f82e56;
+
+        &:hover {
+            color: #192a56;
+        }
+    }
+
+    .hotline.hotline-support {
+        margin-left: 1rem;
+        font-size: 13px;
+        text-transform: uppercase;
+        color: #f82e56;
+    }
+
+    .hotline.hotline-number {
+        font-size: 23px;
+        font-weight: 600;
+        padding-left: 15px;
+        color: #192a56;
+    }
+}
+
+.footer-area {
+    padding: 50px 0px 0px 0px;
+
+    .copyright-text {
+        margin-bottom: 1.5em;
+
+        p {
+            color: #3a3a3a;
+            font-size: 14px;
+            font-family: 'Poppins', sans-serif;
+        }
+    }
+
+    .payment-accept {
+        ul {
+            > li {
+                padding: 3px 5px;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar.main-menu {
+        .navbar-nav {
+            > li {
+                > a {
+                    padding-top: 26.5px;
+                    padding-bottom: 26.5px;
+                    line-height: 27px;
+                    padding-left: 25px;
+                    padding-right: 25px;
+                }
+            }
+        }
+    }
+}

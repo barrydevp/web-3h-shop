@@ -1,0 +1,50 @@
+.shop-area {
+    padding: 65px 0px 0px 0px;
+    padding-left: 15px;
+    .categories {
+        margin-bottom: 45px;
+    }
+    .filter-product {
+        .filter-product-price {
+            label {
+                padding: 0px;
+                line-height: 1.8;
+            }
+        }
+    }
+    .banner {
+        padding: 0px 10px;
+        img {
+            width: 100%;
+            max-height: 650px;
+            width: 100%;
+            max-height: 650px;
+        }
+    }
+}
+.categories {
+    a.list-group-item {
+        &:focus {
+            color: #555;
+            text-decoration: none;
+            background-color: #0fbcf9;
+        }
+        &:hover {
+            color: #555;
+            text-decoration: none;
+            background-color: #0fbcf9;
+        }
+    }
+}
+.product-area {
+    .middle-product {
+        padding: 10px 0px 30px 0px;
+    }
+    padding: 25px 0px 10px 0px;
+    .banner {
+        img {
+            max-height: 550px;
+            width: 100%;
+        }
+    }
+}

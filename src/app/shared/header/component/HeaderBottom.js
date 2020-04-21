@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {Link} from 'react-router-dom'
 import {faShopify} from '@fortawesome/free-brands-svg-icons'
 import {faBolt, faIdBadge} from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
@@ -7,39 +8,39 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 function HeaderBottom() {
 
     return (
-        <div id="sticky-header" class="HeaderBottom header-bottom-area">
-            <nav class="navbar main-menu" role="navigation">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+        <div id="sticky-header" className="HeaderBottom header-bottom-area">
+            <nav className="navbar sticky-top navbar-expand-lg main-menu" role="navigation">
+                <div className="container">
+                    <div className="float-left">
+                        <button type="button" className="navbar-toggler" data-toggle="collapse"
                                 data-target=".navbar-shop-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
+                            <span className="sr-only">Toggle navigation</span>
+                            <span className="icon-bar"></span>
+                            <span className="icon-bar"></span>
+                            <span className="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="home.html">Home</a>
+                        <Link className="navbar-brand" to="/">Home</Link>
                     </div>
-                    <div class="collapse navbar-collapse navbar-shop-collapse">
-                        <ul class="nav navbar-nav">
-                            <li class="icon-flash">
-                                <a href="#">Flash <FontAwesomeIcon icon={faBolt}/> Sale</a>
+                    <div className="collapse navbar-collapse navbar-shop-collapse">
+                        <ul className="navbar-nav mr-auto">
+                            <li className="nav-item icon-flash">
+                                <Link className="nav-link" to="#">Flash <FontAwesomeIcon icon={faBolt}/> Sale</Link>
                             </li>
-                            <li><a href="#">Shop</a></li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/shop">Shop</Link>
+                            </li>
                         </ul>
-                        <div class="nav navbar-nav navbar-right">
-                            <div class="hotline clearfix pull-right d-none d-lg-block">
-                                <div class="hotline-icon">
-                                    <FontAwesomeIcon icon={faIdBadge}/>
-                                </div>
-                                <div class="hotline-number">
-                                    <span><strong>(+84) 00 000 0000</strong></span>
-                                    <span>support@3h-shop.com</span>
-                                </div>
+                        <div className="hotline clearfix d-none d-lg-block">
+                            <div className="hotline-icon">
+                                <FontAwesomeIcon icon={faIdBadge}/>
                             </div>
-                            <div class="bag-cart">
-                                <a href="cart.html"><FontAwesomeIcon size="2x" icon={faShopify}/><sup>3</sup></a>
+                            <div className="hotline-number">
+                                <span><strong>(+84) 00 000 0000</strong></span>
+                                <span>support@3h-shop.com</span>
                             </div>
+                        </div>
+                        <div className="bag-cart">
+                            <Link to="/cart"><FontAwesomeIcon size="2x" icon={faShopify}/><sup>3</sup></Link>
                         </div>
                     </div>
                 </div>

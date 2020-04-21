@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faShopify} from '@fortawesome/free-brands-svg-icons'
 import PropTypes from 'prop-types'
@@ -11,12 +12,12 @@ function HeaderMiddle() {
                 <div className="row">
                     <div className="col-lg-3 col-12">
                         <div className="site-logo">
-                            <a href="#"><img src="images\logo\logo.png" alt=""/></a>
+                            <Link to="/"><img src="images\logo\logo.png" alt=""/></Link>
                         </div>
                     </div>
                     <div className="col-lg-7 col-12">
                         <div className="header-search clearfix">
-                            <div className="category-select pull-left ">
+                            <div className="category-select float-left">
                                 <select className="browser-default custom-select nice-select-menu">
                                     <option selected>Danh mục sản phẩm</option>
                                     <option value="1">One</option>
@@ -33,9 +34,12 @@ function HeaderMiddle() {
                         </div>
                     </div>
                     <div className="col-lg-2 col-12">
-                        <div className="shop-cart-menu pull-right">
-                            <li><a href="#">
-                                <FontAwesomeIcon size="2x" icon={faShopify}/><sup>3</sup></a>
+                        <div className="shop-cart-menu float-right">
+                            <li>
+                                <Link to="cart">
+                                    <FontAwesomeIcon size="2x" icon={faShopify}/>
+                                    <span>3</span>
+                                </Link>
                             </li>
                         </div>
                     </div>

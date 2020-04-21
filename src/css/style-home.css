@@ -7,7 +7,7 @@
 
 .slider-area #carousel-slider .carousel-inner {}
 
-.slider-area #carousel-slider .carousel-inner .item.slide-banner {
+.slider-area .carousel-inner .item.slide-banner {
 
     max-height: 650px;
 
