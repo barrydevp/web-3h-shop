@@ -15,7 +15,7 @@ function HeaderMiddle() {
                 throw new Error(message)
             }
 
-            setRootCategories(data)
+            setRootCategories(data.data || [])
 
         } catch(error) {
             alert(error.message || "error")
@@ -37,7 +37,7 @@ function HeaderMiddle() {
                                 <select
                                     className="d-none d-md-block col-md-4 browser-default nice-select-menu">
                                     <option selected>Danh mục sản phẩm</option>
-                                    {rootCategories.map(cat => {
+                                    {rootCategories && rootCategories.map(cat => {
                                         return <option value={cat._id}>{cat.name}</option>
                                     })}
                                 </select>
