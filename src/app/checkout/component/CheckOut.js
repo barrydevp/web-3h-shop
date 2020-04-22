@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Cart from '../../cart/component/Cart'
 import BillingDetail from './BillingDetail'
 import YourOrder from './YourOrder'
 

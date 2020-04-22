@@ -73,10 +73,8 @@
     outline: none;
     width: 75%;
     height: 30px;
-    padding-right: 130px;
     border: none;
     border-left: 1px solid black;
-    padding: 3px 15px;
     overflow: hidden;
 }
 
@@ -123,7 +121,6 @@
 
 .navbar.main-menu .navbar-brand {
     padding: 0 25px;
-    height: 80px;
     line-height: 80px;
 }
 

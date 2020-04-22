@@ -61,8 +61,6 @@
         background-color: transparent;
         border-radius: 0;
         border: none;
-        height: 45px;
-        line-height: 45px;
         min-width: 180px;
         padding-right: 3px;
 
@@ -80,17 +78,15 @@
 .header-search-form {
     width: 70%;
     display: inline-block;
-    height: 45px;
-    line-height: 45px;
 
     input[type="text"] {
         outline: none;
         width: 75%;
-        height: 30px;
         padding-right: 130px;
-        border-left: 1px solid black;
         padding: 3px 15px;
         overflow: hidden;
+        border: none;
+        border-left: 1px solid black;
     }
 
     input[type="submit"] {
@@ -102,7 +98,6 @@
 
 .main-menu {
     border-radius: 0px;
-    min-height: 60px;
     margin-bottom: 0px;
     background-color: #1c3144e8;
 
@@ -120,11 +115,10 @@
     }
 }
 
-.navbar.main-menu {
+.header-nav.main-menu {
+
     .navbar-brand {
         padding: 0 25px;
-        height: 80px;
-        line-height: 80px;
     }
 
     .navbar-toggler {
@@ -132,32 +126,34 @@
         padding: 9px 10px !important;
     }
 
-    li {
-        > a {
-            &:hover {
-                background-color: #ff3400e8;
-                color: #fff;
-            }
 
-            &:focus {
-                background-color: #ff3400e8;
-                color: #fff;
-            }
+    .link-nav {
+        color: white;
+
+        &:hover {
+            background-color: #ff3400e8;
+            color: #fff;
+        }
+
+        &:focus {
+            background-color: #ff3400e8;
+            color: #fff;
         }
     }
+
 }
 
 #sticky-header {
     .hotline {
+        display: flex;
         border-left: 1px solid rgba(255, 255, 255, 0.2);
-        padding-left: 15px;
-        height: 80px;
+        padding-left: 0.8em;
 
         .hotline-icon {
             display: inline-block;
-            font-size: 45px;
+            font-size: 3em;
             color: #fff;
-            margin-right: 15px;
+            margin-right: 0.2em;
 
             &:hover {
                 color: #f82e56;
@@ -167,7 +163,7 @@
 
     .hotline-number {
         color: white;
-        font-size: 15px;
+        font-size: 0.95em;
 
         span {
             display: block;
@@ -266,13 +262,11 @@
 }
 
 .contact {
-    background-color: #dcdde1;
-    height: 150px;
+    background-color: #dadde1;
 
     .hotline {
         padding: 40px 0px;
         display: inline-block;
-        line-height: 50px;
 
         span {
             text-align: left;
@@ -338,17 +332,22 @@
     }
 }
 
+.HeaderTop {
+    .SignUp {
+        //border-left: 1px solid #e5e5e5;
+        color: #1c3144e8;
+    }
+}
+
 @media (min-width: 768px) {
-    .navbar.main-menu {
+    .header-nav.main-menu {
         .navbar-nav {
-            > li {
-                > a {
-                    padding-top: 26.5px;
-                    padding-bottom: 26.5px;
-                    line-height: 27px;
-                    padding-left: 25px;
-                    padding-right: 25px;
-                }
+            .link-nav {
+                padding-top: 26.5px;
+                padding-bottom: 26.5px;
+                line-height: 27px;
+                padding-left: 25px;
+                padding-right: 25px;
             }
         }
     }

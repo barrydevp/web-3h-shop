@@ -9,7 +9,7 @@ function SideBar() {
                 <div className="categories tag-title">
                     <h2 style={{'margin-top': '0px'}}><span>Categories</span></h2>
                     <div className="list-group">
-                        <a href="#" className="list-group-item">Thời Trang</a>
+                        <a href="#" className="list-group-item">Điện thoại</a>
                         <a href="#" className="list-group-item">Điện Thoại & Phụ Kiện</a>
                         <a href="#" className="list-group-item">Máy Tính & Laptop</a>
                         <a href="#" className="list-group-item">Đồng Hồ</a>

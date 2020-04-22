@@ -1,10 +1,26 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import PropTypes from 'prop-types'
 import {Link} from 'react-router-dom'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faShopify} from '@fortawesome/free-brands-svg-icons'
-import PropTypes from 'prop-types'
+import {getRootCategory} from '../../../../services/api/CategoryServices'
 
 function HeaderMiddle() {
+    const [rootCategories, setRootCategories] = useState([])
+
+    useEffect(async() => {
+        try {
+            const {data, success, message} = await getRootCategory()
+            if(!success) {
+                throw new Error(message)
+            }
+
+            setRootCategories(data)
+
+        } catch(error) {
+            alert(error.message || "error")
+        }
+    }, [])
 
     return (
         <div className="HeaderMiddle header-middle-area">
@@ -16,20 +32,22 @@ function HeaderMiddle() {
                         </div>
                     </div>
                     <div className="col-lg-7 col-12">
-                        <div className="header-search clearfix">
-                            <div className="category-select float-left">
-                                <select className="browser-default custom-select nice-select-menu">
+                        <div className="header-search d-flex align-items-center row clearfix">
+                            <div className="col-0 col-md-4 category-select float-left">
+                                <select
+                                    className="d-none d-md-block col-md-4 browser-default nice-select-menu">
                                     <option selected>Danh mục sản phẩm</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                    {rootCategories.map(cat => {
+                                        return <option value={cat._id}>{cat.name}</option>
+                                    })}
                                 </select>
                             </div>
-                            <div className="header-search-form">
-                                <form method="" action="#">
-                                    <input type="text" name="search" placeholder="Tìm kiếm sản phẩm..."/>
-                                    <input type="submit" name="submit" value="Tìm Kiếm"/>
-                                </form>
+                            <div className="col-12 col-md-8 header-search-form mw-100">
+                                <div className="row">
+                                    <input className="col-6 col-md-8" type="text" name="search"
+                                           placeholder="Tìm kiếm sản phẩm..."/>
+                                    <input className="col-6 col-md-4" type="submit" name="submit" value="Tìm Kiếm"/>
+                                </div>
                             </div>
                         </div>
                     </div>
