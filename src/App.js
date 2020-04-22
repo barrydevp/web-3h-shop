@@ -5,17 +5,22 @@ import Contact from './app/shared/contact/Contact'
 import Footer from './app/shared/footer/Footer'
 import MainApp from './app/MainApp'
 import ScrollToTop from './app/shared/ScrollToTop'
-import {Container, Navbar} from 'react-bootstrap'
+import BindCategoryContext from './app/context/category/BindCategoryContext'
+import BindProductContext from './app/context/product/BindProductContext'
 
 function App() {
     return (
         <div className="App wrapper">
-            <ScrollToTop/>
-            <Header/>
-            <MainApp/>
-            <General/>
-            <Contact/>
-            <Footer/>
+            <BindCategoryContext>
+                <BindProductContext>
+                    <ScrollToTop/>
+                    <Header/>
+                    <MainApp/>
+                    <General/>
+                    <Contact/>
+                    <Footer/>
+                </BindProductContext>
+            </BindCategoryContext>
         </div>
     )
 }

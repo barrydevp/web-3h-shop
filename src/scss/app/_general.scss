@@ -339,6 +339,14 @@
     }
 }
 
+input[type="submit"]:hover {
+    background-color: #ec7872;
+}
+
+input[type="submit"]:focus {
+    outline: none;
+}
+
 @media (min-width: 768px) {
     .header-nav.main-menu {
         .navbar-nav {
