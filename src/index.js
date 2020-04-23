@@ -4,7 +4,7 @@ import {Router} from 'react-router-dom'
 import getHistory from './store/getHistory'
 import './scss/app.scss'
 import App from './App'
-import * as serviceWorker from './serviceWorker'
+// import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(
     <React.StrictMode>
