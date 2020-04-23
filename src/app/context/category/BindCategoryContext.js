@@ -1,5 +1,6 @@
-import React, {useCallback, useState} from 'react'
+import React, {useCallback, useEffect, useState} from 'react'
 import CategoryContext from './CategoryContext'
+import {getRootCategory} from '../../../services/api/CategoryServices'
 
 export default function BindCategoryContext(props) {
     const [categoryContext, setCategoryContext] = useState({
@@ -10,16 +11,36 @@ export default function BindCategoryContext(props) {
             name: '',
             page: 0,
             limit: 0,
-        }
+        },
+        categories: [],
     })
 
-    const dispatch = useCallback((state, merge = true) => {
+
+    useEffect(() => {
+        (async () => {
+            try {
+                const {data, success, message} = await getRootCategory()
+                if (!success) {
+                    throw new Error(message)
+                }
+
+                setCategoryContext((state) => {
+                    return {
+                        ...state,
+                        rootCategories: data.data,
+                    }
+                })
+
+            } catch (error) {
+                alert(error.message || 'error')
+            }
+        })()
 
     }, [])
 
     return (
         <CategoryContext.Provider value={{
-            value: categoryContext, dispatch: setCategoryContext
+            categoryContext, setCategoryContext
         }}>
             {props.children}
         </CategoryContext.Provider>

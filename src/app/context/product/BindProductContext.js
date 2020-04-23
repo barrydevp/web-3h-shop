@@ -13,6 +13,7 @@ export default function BindProductContext(props) {
             _id: '',
             category_id: '',
             name: '',
+            sort: '',
             page: 0,
             limit: 0,
         }
@@ -20,7 +21,7 @@ export default function BindProductContext(props) {
 
     return (
         <ProductContext.Provider value={{
-            value: productContext, dispatch: setProductContext
+            productContext, setProductContext
         }}>
             {props.children}
         </ProductContext.Provider>

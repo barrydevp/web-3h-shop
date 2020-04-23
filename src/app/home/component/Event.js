@@ -32,7 +32,7 @@ function Event() {
                                            20/04/2020 - 01/05/2020 </strong>"</p>}
                                    footer={<p style={{textAlign: 'center'}}> - Thông tin chi tiết: Vui lòng liên hệ <a
                                        href="#">tại đây</a> - </p>}/>
-                        <EventItem src={'images/banner/event3.jpg'}
+                        <EventItem src={'images/banner/banner8.jpg'}
                                    header={<h1><strong> Siêu Phẩm Laptop Gamming </strong></h1>}
                                    content={<p> " Cơ hội nằm trong tay bạn, đừng bỏ lỡ khuyến mãi đợt này, săn
                                        ngay <strong> Samsung Galaxy Z Flip </strong> nhận liền tay ưu đãi giảm thêm

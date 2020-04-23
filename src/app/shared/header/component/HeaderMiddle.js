@@ -3,52 +3,34 @@ import PropTypes from 'prop-types'
 import {Link} from 'react-router-dom'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faShopify} from '@fortawesome/free-brands-svg-icons'
-import {getRootCategory} from '../../../../services/api/CategoryServices'
 import SelectCategory from './SelectCategory'
 import getHistory from '../../../../store/getHistory'
 import SearchProduct from './SearchProduct'
 import CategoryContext from '../../../context/category/CategoryContext'
+import ProductContext from '../../../context/product/ProductContext'
 import {Badge} from 'react-bootstrap'
 
 function HeaderMiddle() {
-    const {value: categoryContext, dispatch: setCategoryContext} = useContext(CategoryContext)
+    const {categoryContext} = useContext(CategoryContext)
+    const {productContext, setProductContext} = useContext(ProductContext)
+    const {rootCategories, query: categoryQuery} = categoryContext
+    const {query: productQuery} = productContext
 
-    const [rootCategories, setRootCategories] = useState([])
-    const [queryProduct, setQueryProduct] = useState({
-        category_id: 0,
-        name: '',
-        sort: '',
-    })
-
-    useEffect(() => {
-        (async () => {
-            try {
-                const {data, success, message} = await getRootCategory()
-                if (!success) {
-                    throw new Error(message)
-                }
-
-                setRootCategories(data.data || [])
-
-            } catch (error) {
-                alert(error.message || 'error')
-            }
-        })()
-
-    }, [])
-
-    const onSetQueryProduct = useCallback((query) => {
-        setQueryProduct((prevQuery) => {
+    const onSetProductQuery = useCallback((query) => {
+        setProductContext(({query: prevQuery, ...leftState}) => {
             return {
-                ...prevQuery,
-                ...query
+                ...leftState,
+                query: {
+                    ...prevQuery,
+                    ...query,
+                }
             }
         })
     }, [])
 
     const handleSearch = useCallback(() => {
-        getHistory().push(`/shop?${'category_id=' + queryProduct.category_id}&${'name=' + queryProduct.name}`)
-    }, [queryProduct])
+        getHistory().push(`/shop?${'category_id=' + productQuery.category_id}&${'name=' + productQuery.name}`)
+    }, [productQuery])
 
 
     return (
@@ -62,10 +44,10 @@ function HeaderMiddle() {
                     </div>
                     <div className="col-lg-7 col-12">
                         <div className="header-search d-flex align-items-center row clearfix">
-                            <SelectCategory rootCategories={rootCategories} selectedValue={queryProduct.category_id}
-                                            onSetQueryProduct={onSetQueryProduct}/>
-                            <SearchProduct queryProduct={queryProduct} handleSearch={handleSearch}
-                                           onSetQueryProduct={onSetQueryProduct}/>
+                            <SelectCategory rootCategories={rootCategories} selectedValue={productQuery.category_id}
+                                            onSetProductQuery={onSetProductQuery}/>
+                            <SearchProduct productQuery={productQuery} handleSearch={handleSearch}
+                                           onSetProductQuery={onSetProductQuery}/>
                         </div>
                     </div>
                     <div className="col-lg-2 col-12">

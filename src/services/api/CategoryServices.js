@@ -6,8 +6,11 @@ const api = createAPIServices({baseUrl})
 
 export const getRootCategory = () => {
     return api.makeRequest({
-        url: `?parent_id=0`,
+        url: ``,
         method: 'get',
+        params: {
+            parent_id: 0,
+        }
     })
 }
 
@@ -20,7 +23,7 @@ export const getRootCategoryTree = () => {
 
 export const getCategoryTreeById = (categoryId) => {
     return api.makeRequest({
-        url: `/categories/${categoryId}/tree`,
+        url: `/${categoryId}/tree`,
         method: 'get',
     })
 }

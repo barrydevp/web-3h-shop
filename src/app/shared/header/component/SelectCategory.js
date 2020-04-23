@@ -11,7 +11,7 @@ function SelectCategory(props) {
     return (
         <div className="SelectCategory col-0 col-md-4 category-select float-left">
             <select className="d-none d-md-block col-md-4 browser-default nice-select-menu" value={selectedValue}
-                    onChange={(event) => props.onSetQueryProduct({category_id: event.target.value})}>
+                    onChange={(event) => props.onSetProductQuery({category_id: event.target.value})}>
                 {rootCategories && rootCategories.map(cat => {
                     return <option key={cat.name} value={cat._id}>{cat.name}</option>
                 })}
@@ -26,7 +26,7 @@ SelectCategory.propTypes = {
         PropTypes.string,
         PropTypes.number
     ]).isRequired,
-    onSetQueryProduct: PropTypes.func.isRequired,
+    onSetProductQuery: PropTypes.func.isRequired,
 }
 
 export default SelectCategory

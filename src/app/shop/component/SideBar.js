@@ -1,19 +1,23 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import PropTypes from 'prop-types'
+import getHistory from '../../../store/getHistory'
 
-function SideBar() {
+function SideBar(props) {
+    const rootCategories = [{_id: 0, name: 'All'}, ...props.rootCategories]
+    const {productQuery} = props
 
     return (
         <div className="SideBar col-lg-3 col-md-4 col-12">
             <div className="sidebar-area shop-sidebar">
                 <div className="categories tag-title">
-                    <h2 style={{'margin-top': '0px'}}><span>Categories</span></h2>
+                    <h2 style={{'marginTop': '0px'}}><span>Categories</span></h2>
                     <div className="list-group">
-                        <a href="#" className="list-group-item">Điện thoại</a>
-                        <a href="#" className="list-group-item">Điện Thoại & Phụ Kiện</a>
-                        <a href="#" className="list-group-item">Máy Tính & Laptop</a>
-                        <a href="#" className="list-group-item">Đồng Hồ</a>
-                        <a href="#" className="list-group-item">Nhà Sách</a>
+                        {rootCategories && rootCategories.map(cat => {
+                            return (
+                                <div key={`cat-${cat.name}`}
+                                     className={`${(productQuery && parseInt(productQuery.category_parent_id) === cat._id) || (cat._id == 0 && !productQuery.category_parent_id) ? 'focus' : ''} list-group-item`} onClick={() => getHistory().push(`/shop?category_parent_id=${cat._id}`)}>{cat.name}</div>
+                            )
+                        })}
                     </div>
                 </div>
                 <div className="filter-product">
@@ -42,6 +46,9 @@ function SideBar() {
     )
 }
 
-SideBar.propTypes = {}
+SideBar.propTypes = {
+    rootCategories: PropTypes.array.isRequired,
+    productQuery: PropTypes.object.isRequired,
+}
 
 export default SideBar
