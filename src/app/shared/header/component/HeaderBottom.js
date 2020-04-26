@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import {Link} from 'react-router-dom'
 import {faShopify} from '@fortawesome/free-brands-svg-icons'
 import {faBolt, faIdBadge} from '@fortawesome/free-solid-svg-icons'

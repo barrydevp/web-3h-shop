@@ -8,22 +8,27 @@ import ScrollToTop from './app/shared/ScrollToTop'
 import BindCategoryContext from './app/context/category/BindCategoryContext'
 import BindProductContext from './app/context/product/BindProductContext'
 import BindCurrentContext from './app/context/current/BindCurrentContext'
+import GlobalLoading from './app/shared/loading/GlobalLoading'
+import BindGlobalContext from './app/context/global/BindGlobalContext'
 
 function App() {
     return (
         <div className="App wrapper">
-            <BindCategoryContext>
-                <BindProductContext>
-                    <BindCurrentContext>
-                        <ScrollToTop/>
-                        <Header/>
-                        <MainApp/>
-                        <General/>
-                        <Contact/>
-                        <Footer/>
-                    </BindCurrentContext>
-                </BindProductContext>
-            </BindCategoryContext>
+            <BindGlobalContext>
+                <BindCategoryContext>
+                    <BindProductContext>
+                        <BindCurrentContext>
+                            <ScrollToTop/>
+                            <Header/>
+                            <MainApp/>
+                            <General/>
+                            <Contact/>
+                            <Footer/>
+                            <GlobalLoading/>
+                        </BindCurrentContext>
+                    </BindProductContext>
+                </BindCategoryContext>
+            </BindGlobalContext>
         </div>
     )
 }

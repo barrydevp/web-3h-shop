@@ -1,8 +1,10 @@
-import React, {useEffect, useState} from 'react'
+import React, {useContext, useEffect, useState} from 'react'
 import CategoryContext from './CategoryContext'
 import {getRootCategory} from '../../../services/api/CategoryServices'
+import GlobalContext from '../global/GlobalContext'
 
 export default function BindCategoryContext(props) {
+    const {setGlobalLoading} = useContext(GlobalContext)
     const [categoryContext, setCategoryContext] = useState({
         rootCategories: [],
         query: {
@@ -18,6 +20,8 @@ export default function BindCategoryContext(props) {
 
     useEffect(() => {
         (async () => {
+            setGlobalLoading(true)
+
             try {
                 const {data, success, message} = await getRootCategory()
                 if (!success) {
@@ -34,6 +38,8 @@ export default function BindCategoryContext(props) {
             } catch (error) {
                 alert(error.message || 'error')
             }
+
+            setGlobalLoading(false)
         })()
 
     }, [])

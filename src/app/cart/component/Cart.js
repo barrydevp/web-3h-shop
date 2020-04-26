@@ -3,15 +3,17 @@ import CartTable from './CartTable'
 import Payment from './Payment'
 import {getOrderItemByOrderId} from '../../../services/api/OrderServices'
 import CurrentContext from '../../context/current/CurrentContext'
+import GlobalContext from '../../context/global/GlobalContext'
 
 function Cart() {
+    const {setGlobalLoading} = useContext(GlobalContext)
     const {currentContext/*, fetchCurrentOrder*/} = useContext(CurrentContext)
     const {orderId} = currentContext
     const [items, setItems] = useState([])
 
     const fetchItems = useCallback(async (orderId) => {
         if (!orderId) return
-
+        setGlobalLoading(true)
         try {
             const {data, success, message} = await getOrderItemByOrderId(orderId)
             if (!success) {
@@ -23,6 +25,8 @@ function Cart() {
         } catch (error) {
             alert(error.message || 'error')
         }
+
+        setGlobalLoading(false)
     }, [])
 
     useEffect(() => {

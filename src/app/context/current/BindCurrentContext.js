@@ -1,8 +1,10 @@
-import React, {useCallback, useEffect, useState} from 'react'
+import React, {useCallback, useContext, useEffect, useState} from 'react'
 import CurrentContext from './CurrentContext'
 import {getCurrentOrder} from '../../../services/api/CurrentServices'
+import GlobalContext from '../global/GlobalContext'
 
 export default function BindCurrentContext(props) {
+    const {setGlobalLoading} = useContext(GlobalContext)
     const [currentContext, setCurrentContext] = useState({
         order: {},
         session: '',
@@ -11,6 +13,8 @@ export default function BindCurrentContext(props) {
     })
 
     const fetchCurrentOrder = useCallback(async () => {
+        setGlobalLoading(true)
+
         try {
             const {data, success, message} = await getCurrentOrder()
             if (!success) {
@@ -29,6 +33,8 @@ export default function BindCurrentContext(props) {
         } catch (error) {
             alert(error.message || 'error')
         }
+
+        setGlobalLoading(false)
     }, [])
 
     useEffect(() => {

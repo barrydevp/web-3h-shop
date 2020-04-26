@@ -15,7 +15,7 @@ function SideBar(props) {
                         {rootCategories && rootCategories.map(cat => {
                             return (
                                 <div key={`cat-${cat.name}`}
-                                     className={`${(productQuery && parseInt(productQuery.category_parent_id) === cat._id) || (cat._id == 0 && !productQuery.category_parent_id) ? 'focus' : ''} list-group-item`} onClick={() => getHistory().push(`/shop?category_parent_id=${cat._id}`)}>{cat.name}</div>
+                                     className={`${(productQuery && parseInt(productQuery.category_parent_id) === cat._id) || (cat._id === 0 && !productQuery.category_parent_id) ? 'focus' : ''} list-group-item`} onClick={() => getHistory().push(`/shop?category_parent_id=${cat._id}`)}>{cat.name}</div>
                             )
                         })}
                     </div>

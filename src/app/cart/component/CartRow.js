@@ -1,11 +1,13 @@
-import React, {useCallback, useMemo, useRef, useState} from 'react'
+import React, {useCallback, useContext, useRef, useState} from 'react'
 import PropTypes from 'prop-types'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faTrash} from '@fortawesome/free-solid-svg-icons'
 import {Link} from 'react-router-dom'
 import {deleteOrderItemById, updateOrderItem} from '../../../services/api/OrderItemServices'
+import GlobalContext from '../../context/global/GlobalContext'
 
 function CartRow(props) {
+    const {setGlobalLoading} = useContext(GlobalContext)
     const {order_item, product, price} = props.item
     const {quantity: originalQuantity} = order_item
     const {name, image_path} = product
@@ -22,6 +24,7 @@ function CartRow(props) {
         }
         if (loading) return
 
+        setGlobalLoading(true)
         setLoading(true)
 
         try {
@@ -44,6 +47,7 @@ function CartRow(props) {
             alert(error.message || 'error')
         }
 
+        setGlobalLoading(false)
         setLoading(false)
     }, [])
 

@@ -3,8 +3,10 @@ import PropTypes from 'prop-types'
 import CurrentContext from '../../context/current/CurrentContext'
 import {insertOrderItem} from '../../../services/api/OrderServices'
 import {useHistory} from 'react-router-dom'
+import GlobalContext from '../../context/global/GlobalContext'
 
 function Center(props) {
+    const {setGlobalLoading} = useContext(GlobalContext)
     const {currentContext/*, fetchCurrentOrder*/} = useContext(CurrentContext)
     const {orderId} = currentContext
     const {_id, name, out_price, discount, description} = props.product
@@ -22,10 +24,11 @@ function Center(props) {
 
         if (loading) return
 
+        setGlobalLoading(true)
         setLoading(true)
 
         try {
-            const {data, success, message} = await insertOrderItem(orderId, {
+            const {/*data,*/ success, message} = await insertOrderItem(orderId, {
                 product_id: productId,
                 quantity: 1,
             })
@@ -33,7 +36,7 @@ function Center(props) {
                 throw new Error(message)
             }
             // console.log(data)
-            alert(`Thêm thành công ${productName} vào giỏ hàng.`)
+            // alert(`Thêm thành công ${productName} vào giỏ hàng.`)
 
             history.push('/cart')
 
@@ -43,6 +46,7 @@ function Center(props) {
             alert(error.message || 'error')
         }
 
+        setGlobalLoading(false)
         setLoading(false)
     }, [])
 

@@ -1,6 +1,7 @@
 import React, {useCallback, useContext, useEffect, useState} from 'react'
 import SideBar from './SideBar'
 import Product from './Product'
+import GlobalContext from '../../context/global/GlobalContext'
 import CategoryContext from '../../context/category/CategoryContext'
 import ProductContext from '../../context/product/ProductContext'
 import {useLocation} from 'react-router-dom'
@@ -9,6 +10,7 @@ import {getListProduct} from '../../../services/api/ProductServices'
 import {getCategoryTreeById} from '../../../services/api/CategoryServices'
 
 function Shop() {
+    const {setGlobalLoading} = useContext(GlobalContext)
     const {categoryContext, setCategoryContext} = useContext(CategoryContext)
     const {productContext, setProductContext} = useContext(ProductContext)
     const {rootCategories, categories} = categoryContext
@@ -21,6 +23,8 @@ function Shop() {
     })
 
     const fetchProduct = useCallback(async (query) => {
+        setGlobalLoading(true)
+
         try {
             const {data, success, message} = await getListProduct({
                 page: 1,
@@ -41,9 +45,13 @@ function Shop() {
         } catch (error) {
             alert(error.message || 'error')
         }
+
+        setGlobalLoading(false)
     }, [])
 
     const fetchSubCategory = useCallback(async () => {
+        setGlobalLoading(true)
+
         try {
             const {data, success, message} = await getCategoryTreeById(query.category_parent_id)
             if (!success) {
@@ -53,13 +61,15 @@ function Shop() {
             setCategoryContext((state) => {
                 return {
                     ...state,
-                    categories: data && data.children || [],
+                    categories: (data && data.children) || [],
                 }
             })
 
         } catch (error) {
             alert(error.message || 'error')
         }
+
+        setGlobalLoading(false)
     }, [query.category_parent_id])
 
     useEffect(() => {
