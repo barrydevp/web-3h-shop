@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 import CartHeader from './CartHeader'
 import CartRow from './CartRow'
 
-function CartTable() {
+function CartTable(props) {
+    const {items} = props
 
     return (
         <div className="CartRow row">
@@ -11,9 +12,9 @@ function CartTable() {
                 <table className="table table-hover shopping-cart-table">
                     <CartHeader/>
                     <tbody>
-                        <CartRow/>
-                        <CartRow/>
-                        <CartRow/>
+                    {items.map((item) => {
+                        return <CartRow item={item} setItems={props.setItems}/>
+                    })}
                     </tbody>
                 </table>
             </div>
@@ -21,6 +22,9 @@ function CartTable() {
     )
 }
 
-CartTable.propTypes = {}
+CartTable.propTypes = {
+    items: PropTypes.array.isRequired,
+    setItems: PropTypes.func.isRequired,
+}
 
 export default CartTable

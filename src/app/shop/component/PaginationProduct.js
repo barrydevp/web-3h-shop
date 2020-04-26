@@ -1,6 +1,6 @@
-import React, {useEffect, useMemo} from 'react'
+import React, {useMemo} from 'react'
 import PropTypes from 'prop-types'
-import {Link, useLocation} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import queryString from 'query-string'
 
 const scrollToTop = () => {

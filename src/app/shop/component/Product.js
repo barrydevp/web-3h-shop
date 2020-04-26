@@ -24,7 +24,7 @@ function Product(props) {
                 blocks = []
             }
 
-            blocks.push(<ProductBlock key={i} product={e}/>)
+            blocks.push(<ProductBlock key={e._id} product={e}/>)
         })
 
         rows.push(<ProductRow key={0}>
@@ -36,7 +36,7 @@ function Product(props) {
 
     const renderSubCategories = useMemo(() => {
         const currentQueryString = queryString.stringify({
-            category_parent_id: props.productQuery && props.productQuery.category_parent_id || 0,
+            category_parent_id: (props.productQuery && props.productQuery.category_parent_id) || 0,
             page: 1,
             limit: 16,
         })
@@ -67,6 +67,8 @@ function Product(props) {
     )
 }
 
-Product.propTypes = {}
+Product.propTypes = {
+    products: PropTypes.object.isRequired,
+}
 
 export default Product

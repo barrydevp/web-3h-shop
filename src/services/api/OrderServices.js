@@ -11,3 +11,18 @@ export const getListOrder = (query) => {
         params: query,
     })
 }
+
+export const getOrderItemByOrderId = (orderId) => {
+    return api.makeRequest({
+        url: `/${orderId}/items`,
+        method: 'get'
+    })
+}
+
+export const insertOrderItem = (orderId, item) => {
+    return api.makeRequest({
+        url: `/${orderId}/items`,
+        method: 'post',
+        data: item,
+    })
+}

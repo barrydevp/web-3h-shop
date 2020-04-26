@@ -1,5 +1,4 @@
-import React, {useState, useEffect, useCallback, useContext} from 'react'
-import PropTypes from 'prop-types'
+import React, {useCallback, useContext} from 'react'
 import {Link} from 'react-router-dom'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faShopify} from '@fortawesome/free-brands-svg-icons'
@@ -13,7 +12,7 @@ import {Badge} from 'react-bootstrap'
 function HeaderMiddle() {
     const {categoryContext} = useContext(CategoryContext)
     const {productContext, setProductContext} = useContext(ProductContext)
-    const {rootCategories, query: categoryQuery} = categoryContext
+    const {rootCategories} = categoryContext
     const {query: productQuery} = productContext
 
     const onSetProductQuery = useCallback((query) => {
@@ -26,10 +25,10 @@ function HeaderMiddle() {
                 }
             }
         })
-    }, [])
+    }, [setProductContext])
 
     const handleSearch = useCallback(() => {
-        getHistory().push(`/shop?${'category_id=' + productQuery.category_id}&${'name=' + productQuery.name}`)
+        getHistory().push(`/shop?${'category_parent_id=' + productQuery.category_id}&${'name=' + productQuery.name}`)
     }, [productQuery])
 
 
@@ -53,7 +52,7 @@ function HeaderMiddle() {
                     <div className="col-lg-2 col-12">
                         <div className="shop-cart-menu float-right">
                             <li>
-                                <Link to="cart">
+                                <Link to="/cart">
                                     <FontAwesomeIcon size="2x" icon={faShopify}/>
                                     <Badge variant="danger"></Badge>
                                 </Link>

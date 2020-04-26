@@ -4,27 +4,19 @@ import LeftSide from './LeftSide'
 import Center from './Center'
 import RightSide from './RightSide'
 
-function Detail() {
+function Detail(props) {
 
     return (
-        <div className="Detail product-details-area">
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-9">
-                        <div className="row">
-                            <LeftSide/>
-                            <Center/>
-                        </div>
-                    </div>
-                    <div className="col-lg-3">
-                        <RightSide/>
-                    </div>
-                </div>
-            </div>
+        <div className="Detail rowdetail row">
+            <LeftSide product={props.product}/>
+            <Center product={props.product}/>
+            <RightSide product={props.product}/>
         </div>
     )
 }
 
-Detail.propTypes = {}
+Detail.propTypes = {
+    product: PropTypes.object.isRequired,
+}
 
 export default Detail

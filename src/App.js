@@ -7,18 +7,21 @@ import MainApp from './app/MainApp'
 import ScrollToTop from './app/shared/ScrollToTop'
 import BindCategoryContext from './app/context/category/BindCategoryContext'
 import BindProductContext from './app/context/product/BindProductContext'
+import BindCurrentContext from './app/context/current/BindCurrentContext'
 
 function App() {
     return (
         <div className="App wrapper">
             <BindCategoryContext>
                 <BindProductContext>
-                    <ScrollToTop/>
-                    <Header/>
-                    <MainApp/>
-                    <General/>
-                    <Contact/>
-                    <Footer/>
+                    <BindCurrentContext>
+                        <ScrollToTop/>
+                        <Header/>
+                        <MainApp/>
+                        <General/>
+                        <Contact/>
+                        <Footer/>
+                    </BindCurrentContext>
                 </BindProductContext>
             </BindCategoryContext>
         </div>

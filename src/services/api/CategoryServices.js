@@ -9,7 +9,7 @@ export const getRootCategory = () => {
         url: ``,
         method: 'get',
         params: {
-            parent_id: 0,
+            parent_id: -1,
         }
     })
 }

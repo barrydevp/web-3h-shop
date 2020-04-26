@@ -1,8 +1,8 @@
-import React, {useMemo} from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
 function SearchProduct(props) {
-    const productName = props.productQuery && props.productQuery.name || ''
+    const productName = (props.productQuery && props.productQuery.name) || ''
 
     return (
         <div className="SearchProduct col-12 col-md-8 header-search-form mw-100">

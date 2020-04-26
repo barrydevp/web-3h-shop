@@ -10,7 +10,6 @@ function CartHeader() {
                 <th>Sản phẩm</th>
                 <th>Giá</th>
                 <th>Số lượng</th>
-                <th>Mã giảm giá</th>
                 <th>Thành tiền</th>
                 <th>Hủy</th>
             </tr>

@@ -11,3 +11,10 @@ export const getListProduct = (query) => {
         params: query,
     })
 }
+
+export const getProductById = (productId) => {
+    return api.makeRequest({
+        url: `/${productId}`,
+        method: 'get',
+    })
+}

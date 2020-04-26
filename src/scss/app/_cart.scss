@@ -60,6 +60,19 @@ table.shopping-cart-table {
             color: #535353;
         }
     }
+    td.product-remove {
+        button {
+            color: #d71111;
+        }
+
+        button:hover {
+            color: #992e2e;
+        }
+
+        button.disabled {
+            color: #992e2e;
+        }
+    }
 }
 .shopping-cart-table {
     td {

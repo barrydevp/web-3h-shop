@@ -1,6 +1,8 @@
 import Axios from 'axios'
 import {getAccessToken} from '../AuthServices'
 
+// Axios.defaults.withCredentials = true
+
 const _store = {
     errorSubscribers: [],
 }
@@ -129,6 +131,7 @@ export default (options = {}) => {
         baseURL: baseUrlValidated,
         timeout: 30000,
         headers,
+        withCredentials: true,
     })
 
     const _changeBaseURL = (baseURL) => {

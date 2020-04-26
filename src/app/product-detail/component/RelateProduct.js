@@ -25,7 +25,7 @@ function RelateProduct() {
 
                                             <div className="single-product-wrapper">
                                                 <div className="product-img">
-                                                    <a href="single-product.html"><img src="images\product\1.jpeg"
+                                                    <a href="single-product.html"><img src="images\product\a1.jpeg"
                                                                                        alt="Image of Product"/></a>
                                                     <div className="product-hover">
                                                         <div className="quick-view">
@@ -67,7 +67,7 @@ function RelateProduct() {
 
                                             <div className="single-product-wrapper">
                                                 <div className="product-img">
-                                                    <a href="single-product.html"><img src="images\product\2.jpeg"
+                                                    <a href="single-product.html"><img src="images\product\a2.jpeg"
                                                                                        alt="Image of Product"/></a>
                                                     <div className="product-hover">
                                                         <div className="quick-view">
@@ -109,7 +109,7 @@ function RelateProduct() {
 
                                             <div className="single-product-wrapper">
                                                 <div className="product-img">
-                                                    <a href="single-product.html"><img src="images\product\3.jpeg"
+                                                    <a href="single-product.html"><img src="images\product\a3.jpeg"
                                                                                        alt="Image of Product"/></a>
                                                     <div className="product-hover">
                                                         <div className="quick-view">
@@ -151,7 +151,7 @@ function RelateProduct() {
 
                                             <div className="single-product-wrapper">
                                                 <div className="product-img">
-                                                    <a href="single-product.html"><img src="images\product\4.jpeg"
+                                                    <a href="single-product.html"><img src="images\product\a4.jpeg"
                                                                                        alt="Image of Product"/></a>
                                                     <div className="product-hover">
                                                         <div className="quick-view">

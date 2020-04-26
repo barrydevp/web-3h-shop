@@ -467,3 +467,397 @@
     margin: 0 auto;
 }
 
+.ProductDetail {
+    a {
+        text-decoration: none;
+    }
+
+    .rowtop {
+        padding: 5px 5px;
+    }
+
+    h1, .h1 {
+        font-size: 2rem;
+    }
+
+    .rowdetail {
+        border-top: 1px solid #e5e5e5;
+        padding: 15px 0;
+        margin-top: 5px;
+        clear: both;
+
+        .LeftSide.picture {
+            float: left;
+            overflow: hidden;
+            position: relative;
+
+            img {
+                display: block;
+                height: auto;
+                margin: auto;
+                cursor: pointer;
+                max-width: 100%;
+            }
+
+            .text-viewimage {
+                color: #666;
+                font-size: 14px;
+                display: block;
+                width: 60%;
+                text-align: center;
+                margin: 0 auto;
+                margin-top: 15px;
+            }
+        }
+
+        .Center.price_sale {
+            float: left;
+            position: relative;
+
+            .area_price {
+                display: block;
+                overflow: hidden;
+                line-height: 20px;
+                padding: 0 10px 10px;
+
+                strong {
+                    display: inline-block;
+                    overflow: hidden;
+                    font-size: 24px;
+                    color: #e10c00;
+                    vertical-align: middle;
+                    margin-right: 10px;
+                }
+
+                label.installment {
+                    background: #f28902;
+                    margin: 0 0 0 5px;
+                }
+
+                label {
+                    display: inline-block;
+                    position: relative;
+                    font-size: 11px;
+                    color: #fff;
+                    font-weight: 600;
+                    background: #fff;
+                    border-radius: 3px;
+                    padding: 0 5px 0 8px;
+                    margin: 0 0 5px 5px;
+                    height: 18px;
+                }
+
+                span {
+                    display: inline-block;
+                    font-size: 14px;
+                    color: #c1000c;
+                }
+
+                span.hisprice {
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-size: 18px;
+                    color: #999;
+                    text-decoration: line-through;
+                    margin-right: 10px;
+                }
+            }
+
+            .memory {
+                padding: 0 10px;
+                float: left;
+                width: 100%;
+
+                .m_default {
+                    margin-bottom: 15px;
+
+                    b {
+                        font-weight: bold;
+                    }
+
+                    .installment {
+                        display: none;
+                    }
+
+                    label.installment {
+                        background: #d0021b;
+                        position: relative;
+                        display: inline-block;
+                        font-size: 11px;
+                        color: #fff;
+                        font-weight: 600;
+                        -moz-border-radius: 3px;
+                        -webkit-border-radius: 3px;
+                        border-radius: 3px;
+                        padding: 0 5px 0 8px;
+                        margin: 0 0 5px 5px;
+                        height: 18px;
+                    }
+                }
+
+                .item {
+                    position: relative;
+                    background: #fff;
+                    border: 1px solid #ddd;
+                    -moz-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .15);
+                    -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .15);
+                    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .15);
+                    -moz-border-radius: 3px;
+                    -webkit-border-radius: 3px;
+                    border-radius: 3px;
+                    float: left;
+                    text-align: center;
+                    padding: 10px 10px 10px 10px;
+                    margin-right: 10px;
+                    margin-bottom: 15px;
+                    cursor: pointer;
+
+                    span {
+                        color: #333;
+                    }
+                }
+
+                .item.active {
+                    border: 1px solid #f89008;
+
+                    span {
+                        font-weight: bold;
+                    }
+
+                    i.iconmobile-opt {
+                        background: url("https://www.thegioididong.com/Content/desktop/images/V4/game/check.png");
+                        width: 14px;
+                        height: 14px;
+                    }
+                }
+
+                strong {
+                    font-size: 16px;
+                    display: block;
+                    color: #e10c00;
+                }
+
+                i.iconmobile-opt {
+                    background-position: -380px -30px;
+                    width: 16px;
+                    height: 16px;
+                    display: inline-block;
+                    vertical-align: sub;
+                    margin-right: 5px;
+                }
+
+            }
+
+            .area_promotion {
+                display: block;
+                overflow: hidden;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                position: relative;
+                margin: 5px 10px 12px;
+                background: #fff;
+                padding-bottom: 10px;
+
+                strong {
+                    font-weight: bold;
+                    display: block;
+                    overflow: hidden;
+                    font-size: 15px;
+                    color: #333;
+                    padding: 15px 15px 10px 15px;
+                    text-transform: uppercase;
+                }
+
+                .infopr span {
+                    display: block;
+                    overflow: hidden;
+                    font-size: 14px;
+                    color: #333;
+                    padding: 0 15px 5px 40px;
+                }
+
+                .vipservice {
+                    margin-bottom: 0 !important;
+                    border: none;
+                    margin: 10px 12px 0 12px;
+                    border-top: 1px solid #ccc;
+                    padding: 12px 0 0 0;
+                    border-radius: 0;
+
+                    input {
+                        font: 14px/18px Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+                        color: #333;
+                        outline: none;
+                        zoom: 1;
+                    }
+                }
+            }
+
+            .area_order {
+                display: block;
+                overflow: hidden;
+                margin: 10px;
+
+                .buy_now {
+                    display: block;
+                    overflow: hidden;
+                    padding: 7px 0;
+                    border-radius: 4px;
+                    font-size: 16px;
+                    line-height: normal;
+                    text-transform: uppercase;
+                    color: #fff;
+                    text-align: center;
+                    background: #ff3838;
+                }
+
+                button.buy_now {
+                    border: none;
+                    width: 100%;
+                }
+
+                button.buy_now:hover {
+                    background: #d75a5a;
+                }
+
+                button.buy_now.disabled {
+                    background: #d75a5a;
+                }
+
+                button.buy_now:focus {
+                    border: none;
+                    outline: none;
+                }
+
+                span {
+                    display: block;
+                    font-size: 13px;
+                    color: #fff;
+                    text-transform: none;
+                    padding-top: 3px;
+                }
+
+                .buy_repay {
+                    border:none;
+                    width: 48%;
+                    line-height: normal;
+                    display: block;
+                    padding: 7px 10px;
+                    text-align: center;
+                    margin: 10px 0 0;
+                    background: #288ad6;
+                    color: #fff;
+                    -moz-border-radius: 4px;
+                    -webkit-border-radius: 4px;
+                    border-radius: 4px;
+                    font-size: 15px;
+                    text-transform: uppercase;
+                    float: left;
+                }
+
+                .buy_repay:hover {
+                    background: #508fc2;
+                }
+
+                .buy_repay.s {
+                    float: right;
+                }
+            }
+
+            .callorder {
+                display: block;
+                overflow: hidden;
+                padding: 0 10px;
+                font-size: 14px;
+                color: #333;
+                margin-top: -10px;
+
+                .ct {
+                    padding-bottom: 5px;
+                    padding-top: 5px;
+                    margin-top: 8px;
+                    text-align: center;
+                }
+
+                span {
+                    display: inline-block;
+                    padding: 5px 0 0;
+                }
+
+                a {
+                    color: #288ad6;
+                }
+            }
+        }
+
+        .RightSide.accessories {
+            overflow: hidden;
+
+            h3 {
+                display: block;
+                overflow: hidden;
+                font-size: 20px;
+                color: #333;
+                line-height: 1.3em;
+            }
+
+            ul, ol {
+                list-style: none;
+            }
+
+            li {
+                display: block;
+                overflow: hidden;
+                padding: 10px 0;
+
+                img {
+                    float: left;
+                    width: 20%;
+                    height: AUTO;
+                    margin-right: 10px;
+                }
+
+                h3 {
+                    display: block;
+                    overflow: hidden;
+                    color: #333;
+                    line-height: 1.3em;
+                    font-weight: bold;
+                    font-size: 14px;
+                }
+
+                strong.gs {
+                    float: left;
+                    margin-right: 10px;
+                }
+
+                strong.gg {
+                    color: #666;
+                    text-decoration: line-through;
+                    font-weight: normal;
+                }
+
+                label {
+                    display: inline-block;
+                    font-size: 11px;
+                    color: #fff;
+                    font-weight: 600;
+                    background: #3fb846;
+                    border-radius: 2px;
+                    padding: 0 5px;
+                    height: 18px;
+                }
+
+                label.per {
+                    background: #ee170b;
+                }
+            }
+
+            .viewall {
+                padding: 8px 0 0 0;
+                color: #288ad6;
+                display: block;
+            }
+        }
+    }
+}

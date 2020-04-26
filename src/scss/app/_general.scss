@@ -6,6 +6,16 @@
 /**/
 /**/
 /**/
+
+button {
+    border: none;
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+}
+
 .header-area {
     .header-top-area {
         height: 45px;

@@ -21,7 +21,7 @@ function Event() {
                                        rinh smartphone xịn về nhà, tiết kiệm quá đã. <strong> Thời gian từ
                                            20/04/2020 - 01/05/2020 </strong>"</p>}
                                    footer={<p style={{textAlign: 'center'}}> - Thông tin chi tiết: Vui lòng liên hệ <a
-                                       href="#">tại đây</a> - </p>}/>
+                                       href="/products/181">tại đây</a> - </p>}/>
                         <EventItem src={'images/banner/banner2.jpg'}
                                    header={<h1><strong> Giảm Giá 20% - Smart Watch </strong></h1>}
                                    content={<p> " Cơ hội nằm trong tay bạn, đừng bỏ lỡ khuyến mãi đợt này, săn
@@ -31,7 +31,7 @@ function Event() {
                                        rinh smartphone xịn về nhà, tiết kiệm quá đã. <strong> Thời gian từ
                                            20/04/2020 - 01/05/2020 </strong>"</p>}
                                    footer={<p style={{textAlign: 'center'}}> - Thông tin chi tiết: Vui lòng liên hệ <a
-                                       href="#">tại đây</a> - </p>}/>
+                                       href="/products/181">tại đây</a> - </p>}/>
                         <EventItem src={'images/banner/banner8.jpg'}
                                    header={<h1><strong> Siêu Phẩm Laptop Gamming </strong></h1>}
                                    content={<p> " Cơ hội nằm trong tay bạn, đừng bỏ lỡ khuyến mãi đợt này, săn
@@ -41,7 +41,7 @@ function Event() {
                                        rinh smartphone xịn về nhà, tiết kiệm quá đã. <strong> Thời gian từ
                                            20/04/2020 - 01/05/2020 </strong>"</p>}
                                    footer={<p style={{textAlign: 'center'}}> - Thông tin chi tiết: Vui lòng liên hệ <a
-                                       href="#">tại đây</a> - </p>}/>
+                                       href="/products/181">tại đây</a> - </p>}/>
                     </div>
                     <div className="footer-event">
                     </div>
