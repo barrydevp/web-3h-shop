@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 function General() {
 
@@ -11,10 +12,10 @@ function General() {
                             <h4 className="title">Information</h4>
                             <div className="menu">
                                 <ul>
-                                    <li><a href="">Home Page Shop</a></li>
-                                    <li><a href="">Flash Sale</a></li>
-                                    <li><a href="">Shop</a></li>
-                                    <li><a href="">Contact</a></li>
+                                    <li><Link to="/">Home Page Shop</Link></li>
+                                    <li><Link to="/">Flash Sale</Link></li>
+                                    <li><Link to="/">Shop</Link></li>
+                                    <li><Link to="/">Contact</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -24,10 +25,10 @@ function General() {
                             <h4 className="title">Information</h4>
                             <div className="menu">
                                 <ul>
-                                    <li><a href="">Home Page Shop</a></li>
-                                    <li><a href="">Flash Sale</a></li>
-                                    <li><a href="">Shop</a></li>
-                                    <li><a href="">Contact</a></li>
+                                    <li><Link to="/">Home Page Shop</Link></li>
+                                    <li><Link to="/">Flash Sale</Link></li>
+                                    <li><Link to="/">Shop</Link></li>
+                                    <li><Link to="/">Contact</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -37,10 +38,10 @@ function General() {
                             <h4 className="title">Information</h4>
                             <div className="menu">
                                 <ul>
-                                    <li><a href="">Home Page Shop</a></li>
-                                    <li><a href="">Flash Sale</a></li>
-                                    <li><a href="">Shop</a></li>
-                                    <li><a href="">Contact</a></li>
+                                    <li><Link to="/">Home Page Shop</Link></li>
+                                    <li><Link to="/">Flash Sale</Link></li>
+                                    <li><Link to="/">Shop</Link></li>
+                                    <li><Link to="/">Contact</Link></li>
                                 </ul>
                             </div>
                         </div>

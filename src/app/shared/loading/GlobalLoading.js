@@ -5,13 +5,13 @@ function GlobalLoading() {
     const {globalContext} = useContext(GlobalContext)
     const {globalLoading} = globalContext
 
-    return globalLoading &&
-        (<div className="GlobalLoading loading-container">
-                <div className="loading">
-                    <img src="/images/loader.gif" alt="Loading"></img>
-                </div>
+    return (
+        <div className={`GlobalLoading loading-container ${!globalLoading ? 'd-none' : ''}`}>
+            <div className="loading">
+                <img src="/images/loader.gif" alt="Loading"></img>
             </div>
-        )
+        </div>
+    )
 }
 
 GlobalLoading.propTypes = {}

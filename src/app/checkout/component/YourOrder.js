@@ -1,61 +1,55 @@
-import React from 'react'
+import React, {useMemo} from 'react'
 import PropTypes from 'prop-types'
 
-function YourOrder() {
+function YourOrder(props) {
+    const {totalPrice, totalOriginalPrice} = useMemo(() => {
+        return props.items.reduce((prev, item) => {
+            const {totalPrice, totalOriginalPrice} = item
+
+            return {
+                totalPrice: prev.totalPrice + totalPrice,
+                totalOriginalPrice: prev.totalOriginalPrice + totalOriginalPrice
+            }
+        }, {totalPrice: 0, totalOriginalPrice: 0})
+    }, [props.items])
 
     return (
         <div className="YourOrder your-order">
-            <h3 className="title-7 margin-bottom-50">Your Order</h3>
+            <h3 className="title-7 margin-bottom-50">Giỏ hàng của bạn</h3>
             <div className="your-order-table table-responsive">
                 <table className="table">
                     <thead>
                     <tr>
-                        <th className="product-name">Product</th>
-                        <th className="product-total">Total</th>
+                        <th className="product-name">Sản phẩm</th>
+                        <th className="product-total">Tổng tiền</th>
                     </tr>
                     </thead>
                     <tbody>
+                    {props.items.map(item => {
+                        const {order_item, product, totalPrice, totalOriginalPrice} = item
+                        const {name, discount} = product
+                        const {quantity, _id} = order_item
+
+                        return (
+                            <tr key={`order-item-${_id}`}>
+                                <td className="product-name">
+                                    {`${name} (${quantity})`}
+                                </td>
+                                <td className="product-total">
+                                    <strong>${totalPrice}</strong>
+                                    {discount > 0 && <span>{totalOriginalPrice}</span>}
+                                </td>
+                            </tr>
+                        )
+                    })}
                     <tr>
-                        <td className="product-name">Lorem Ipsum comes (1)</td>
-                        <td className="product-total">$499.00</td>
-                    </tr>
-                    <tr>
-                        <td className="product-name">Extremes of Good (3)</td>
-                        <td className="product-total">$559.00</td>
-                    </tr>
-                    <tr>
-                        <td className="product-name">Lorem Ipsum comes (1)</td>
-                        <td className="product-total">$320.00</td>
-                    </tr>
-                    <tr className="shipping">
-                        <th>Shipping</th>
-                        <td>
-                            <ul>
-                                <li>
-                                    <input type="checkbox" id="1"/>
-                                    <label htmlFor="1">
-                                        Free Shipping
-                                    </label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" id="2"/>
-                                    <label htmlFor="2">
-                                        Flat Rate <span
-                                        className="amount">$120.00</span>
-                                    </label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" id="3"/>
-                                    <label htmlFor="3">
-                                        International Delivery
-                                    </label>
-                                </li>
-                            </ul>
+                        <td className="product-name order-total">
+                            <strong>Cần thanh toán</strong>
                         </td>
-                    </tr>
-                    <tr>
-                        <td className="product-name order-total">Order Total</td>
-                        <td className="product-total order-total">$1378.00</td>
+                        <td className="product-total order-total">
+                            <strong>${Math.round(totalPrice * 100) / 100}</strong>
+                            {totalOriginalPrice - totalPrice > 0 &&
+                            <span>{Math.round(totalOriginalPrice * 100) / 100}</span>}</td>
                     </tr>
                     </tbody>
                 </table>
@@ -64,6 +58,8 @@ function YourOrder() {
     )
 }
 
-YourOrder.propTypes = {}
+YourOrder.propTypes = {
+    items: PropTypes.array.isRequired,
+}
 
 export default YourOrder

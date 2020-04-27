@@ -9,13 +9,13 @@ function Center(props) {
     const {setGlobalLoading} = useContext(GlobalContext)
     const {currentContext/*, fetchCurrentOrder*/} = useContext(CurrentContext)
     const {orderId} = currentContext
-    const {_id, name, out_price, discount, description} = props.product
+    const {_id, out_price, discount, description} = props.product
     const price = Math.round(out_price * (1 - discount) * 100) / 100
     const history = useHistory()
     const [loading, setLoading] = useState(false)
     // const discountPrice = Math.round((out_price - price) * 100) / 100
 
-    const insertItem = useCallback(async ({orderId, productId, productName}) => {
+    const insertItem = useCallback(({orderId, productId}) => async () => {
         if (!orderId) {
             alert('Đã có lỗi xảy ra vui lòng refresh lại trang hoặc ấn F5')
 
@@ -97,19 +97,17 @@ function Center(props) {
             <div className="area_order area_orderM">
 
                 <button className={`buy_now ${loading || !orderId ? 'disabled' : ''}`}
-                        onClick={() => {
-                            !loading && insertItem({orderId, productId: _id, productName: name})
-                        }}
+                        onClick={insertItem({orderId, productId: _id})}
                         disabled={loading || !orderId}>
                     <b>Mua ngay</b>
                     <span>Giao tận nơi hoặc nhận tại siêu thị</span>
                 </button>
 
-                <a id="tra-gop" className="buy_repay " href="/tra-gop/dtdd/iphone-11-pro-256gb">
+                <a id="tra-gop" className="buy_repay" href="/tra-gop/dtdd/iphone-11-pro-256gb">
                     <b>Mua trả góp 0%</b>
                     <span>Thủ tục đơn giản</span>
                 </a>
-                <a className="buy_repay s " href="/tra-gop/dtdd/iphone-11-pro-256gb?m=credit">
+                <a className="buy_repay s" href="/tra-gop/dtdd/iphone-11-pro-256gb?m=credit">
                     <b>Trả góp qua thẻ</b>
                     <span>Visa, Master, JCB</span>
                 </a>
@@ -117,7 +115,7 @@ function Center(props) {
 
             <div className="callorder">
                 <div className="ct">
-                    <span>Gọi đặt mua: <a href="tel:18001060">1800.1060</a> (miễn phí - 7:30-22:00)</span>
+                    <span>Gọi đặt mua: <a href="tel:18000000">1800.0000</a> (miễn phí - 7:30-22:00)</span>
                 </div>
             </div>
         </div>

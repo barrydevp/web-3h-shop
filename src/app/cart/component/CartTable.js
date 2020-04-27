@@ -12,8 +12,8 @@ function CartTable(props) {
                 <table className="table table-hover shopping-cart-table">
                     <CartHeader/>
                     <tbody>
-                    {items.map((item) => {
-                        return <CartRow item={item} setItems={props.setItems}/>
+                    {items.map((item, i) => {
+                        return <CartRow key={`shopping-cart-table-${i}`} item={item} setItems={props.setItems}/>
                     })}
                     </tbody>
                 </table>

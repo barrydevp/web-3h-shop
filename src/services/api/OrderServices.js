@@ -26,3 +26,11 @@ export const insertOrderItem = (orderId, item) => {
         data: item,
     })
 }
+
+export const checkoutOrder = (orderId, item) => {
+    return api.makeRequest({
+        url: `/${orderId}/checkout`,
+        method: 'post',
+        data: item,
+    })
+}

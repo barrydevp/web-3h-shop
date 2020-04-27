@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState} from 'react'
+import React, {useCallback, useState} from 'react'
 import GlobalContext from './GlobalContext'
 
 export default function BindGlobalContext(props) {

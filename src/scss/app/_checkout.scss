@@ -5,6 +5,7 @@
     line-height: 18px;
     text-transform: uppercase;
 }
+
 .coupon-accordion {
     h3 {
         background-color: #dedede;
@@ -16,6 +17,7 @@
         padding: 1em 2em 1em 3.5em;
         position: relative;
         width: auto;
+
         &::before {
             color: #4a4a4a;
             content: "\e634";
@@ -26,14 +28,17 @@
             top: 1em;
         }
     }
+
     span {
         color: #003399;
         cursor: pointer;
+
         &:hover {
             color: #eb3b60;
         }
     }
 }
+
 p.lost-password {
     a {
         &:hover {
@@ -41,18 +46,22 @@ p.lost-password {
         }
     }
 }
+
 .coupon-content {
     border: 1px solid #e5e5e5;
     display: none;
     margin-bottom: 20px;
     padding: 20px;
 }
+
 .coupon-checkout-content {
     display: none;
 }
+
 .checkout-area {
     padding-bottom: 30px;
 }
+
 .checkbox-form {
     h3 {
         border-bottom: 1px solid #e5e5e5;
@@ -63,14 +72,21 @@ p.lost-password {
         width: 100%;
     }
 }
+
 .title-7 {
     font-size: 20px;
 }
+
 .payment-method {
     border: 1px solid #e5e5e5;
     padding: 30px;
 }
+
 .payment-accordion {
+    label {
+        margin-left: 0.3em;
+    }
+
     h3 {
         color: #878787;
         cursor: pointer;
@@ -80,6 +96,7 @@ p.lost-password {
         margin: 0 0 20px 20px;
         text-transform: none;
         position: relative;
+
         a {
             color: #6f6f6f;
             font-size: 14px;
@@ -87,6 +104,7 @@ p.lost-password {
             position: relative;
             text-transform: capitalize;
             text-decoration: none;
+
             &:before {
                 content: "";
                 display: inline-block;
@@ -98,6 +116,7 @@ p.lost-password {
             }
         }
     }
+
     h3.open {
         a {
             &:after {
@@ -112,16 +131,20 @@ p.lost-password {
             }
         }
     }
+
     img {
         margin-left: 15px;
     }
 }
+
 .payment-accordion-toggle.active {
     color: #3e3e3e;
+
     &::before {
         background: #3e3e3e;
     }
 }
+
 .payment-accordion-toggle {
     &::before {
         background: #ffffff none repeat scroll 0 0;
@@ -136,12 +159,15 @@ p.lost-password {
         width: 7px;
     }
 }
+
 .payment-content {
     p {
         font-size: 13px;
     }
+
     display: none;
     margin-left: 20px;
+
     a {
         img {
             border: 1px solid #e5e5e5;
@@ -151,9 +177,11 @@ p.lost-password {
         }
     }
 }
+
 .payment-content.default {
     display: block;
 }
+
 .checkout-page.table-content {
     table {
         th {
@@ -161,6 +189,7 @@ p.lost-password {
         }
     }
 }
+
 .your-order-table {
     .table {
         tr {
@@ -169,6 +198,7 @@ p.lost-password {
                     text-align: right;
                 }
             }
+
             td {
                 &:last-child {
                     text-align: right;
@@ -176,19 +206,23 @@ p.lost-password {
             }
         }
     }
+
     ul {
         li {
             list-style: none;
         }
     }
+
     td {
         border-right: 1px solid #e5e5e5;
         border-left: 1px solid #e5e5e5;
     }
+
     th {
         border-right: 1px solid #e5e5e5;
         border-left: 1px solid #e5e5e5;
     }
+
     tr {
         &:last-child {
             td {
@@ -197,18 +231,50 @@ p.lost-password {
         }
     }
 }
+
 p.form-row {
     margin: 0;
+
     label {
         margin-left: 10px;
         margin-top: 10px;
     }
 }
+
 .order-button-payment {
-    input[type="submit"] {
-        margin: 25px 0 0;
+    .buy_now {
+        display: block;
+        overflow: hidden;
+        padding: 7px 0;
+        border-radius: 4px;
+        font-size: 16px;
+        line-height: normal;
+        text-transform: uppercase;
+        color: #fff;
+        text-align: center;
+        background: #ff3838;
+        height: 45px;
+    }
+
+    .buy_now {
+        border: none;
+        width: 100%;
+    }
+
+    .buy_now:hover {
+        background: #d75a5a;
+    }
+
+    .buy_now.disabled {
+        background: #d75a5a;
+    }
+
+    .buy_now:focus {
+        border: none;
+        outline: none;
     }
 }
+
 td.wishlist-in-stock {
     label {
         font-weight: 500;
@@ -216,6 +282,7 @@ td.wishlist-in-stock {
         color: #f82e56;
     }
 }
+
 td.product-add-to-cart {
     a {
         font-size: 12px;
@@ -228,9 +295,54 @@ td.product-add-to-cart {
         line-height: 40px;
         padding: 0 15px;
         text-decoration: none;
+
         &:hover {
             background-color: #f82e56;
             color: #fff;
+        }
+    }
+}
+
+.BillingDetail {
+
+    .info {
+        input {
+            box-sizing: border-box;
+            color: #333;
+            outline: none;
+            zoom: 1;
+            display: block;
+            padding: 9px 0;
+            border: 1px solid #d9d9d9;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            margin: 10px 0 5px;
+            text-indent: 10px;
+            width: 99.6%;
+        }
+    }
+
+}
+
+.YourOrder {
+    .product-total {
+        strong {
+            display: inline-block;
+            vertical-align: middle;
+            overflow: hidden;
+            font-size: 12px;
+            color: #e10c00;
+            line-height: 15px;
+        }
+
+        span {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 12px;
+            text-decoration: line-through;
+            margin-left: 3px;
+            color: #222;
         }
     }
 }
