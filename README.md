@@ -1,68 +1,39 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# [WEB-3H-SHOP](http://web-3h-shop.herokuapp.com/)
 
-## Available Scripts
+### 3H-SHOP web client application
+### [3H-SHOP web api application](https://github.com/barrydevp/api-3h-shop)
 
-In the project directory, you can run:
+## Nội Dung
 
-### `npm start`
+- [Giới thiệu](#gioithieu)
+- [Công nghệ](#congnghe)
+- [Mô tả](#mota)
+- [Contributing](#contributing)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Giới thiệu
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- Tên dự án: 3H-Shop (TrippleH)
+- Ngày nay trong sự chuyển mình của nền kinh tế và nhịp sống hối hả của con người thì thương mại điện tử ngày càng phát triển và ảnh hưởng sâu rộng.
+- Website bán hàng hay website thương  mại điện tử là trang thông tin điện tử được thiết lập để phục vụ một phần hoặc toàn bộ quy trình của hoạt động mua bán hàng hóa hay cung ứng dịch vụ, từ trưng bày giới thiệu hàng hóa, dịch vụ đến giao kết hợp đồng, cung ứng dịch vụ, thanh toán và dịch vụ sau bán hàng
 
-### `npm test`
+## Công nghệ
+- Reactjs
+- Go-gin
+- Mysql
+- Heroku PaaS
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Mô tả
+#### Dự án được chia cấu trúc thành 2 phần:
+- Client server và Rest API server
+- Client sử dụng Framework REACTJS làm Single-Page-Application và xử dụng NODEJS làm nển tảng phía server, hoạt động trên cơ chế client-side-rendering
+- Rest API sử dụng thư viện Gin-Gonic của Go
+- Mysql sử dụng dịch vụ của ClearDB
+- Hosting, domain sử dụng dịch vụ PaaS của Heroku
 
-### `npm run build`
+#### Trang web cung cấp các dịch vụ:
+- Mua bán đồ dùng công nghệ, phụ kiện
+- Tư vấn về công nghệ
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Contributing
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/barrydevp/web-3h-shop/compare).
