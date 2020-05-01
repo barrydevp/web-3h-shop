@@ -43,7 +43,7 @@ function Product(props) {
 
         return props.categories.map(cat => {
             return (
-                <Link to={`/shop?${currentQueryString}&category_id=${cat._id}`} data-id="80" className="col-2"><img
+                <Link to={`/shop?${currentQueryString}&category_id=${cat._id}`} data-id="80" className="col-4 col-md-2"><img
                     src={cat.image_path} alt={cat.name}/></Link>
             )
         })

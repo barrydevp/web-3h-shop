@@ -10,6 +10,7 @@ import BindProductContext from './app/context/product/BindProductContext'
 import BindCurrentContext from './app/context/current/BindCurrentContext'
 import GlobalLoading from './app/shared/loading/GlobalLoading'
 import BindGlobalContext from './app/context/global/BindGlobalContext'
+import FixedCart from './app/shared/general/FixedCart'
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
                             <General/>
                             <Contact/>
                             <Footer/>
+                            <FixedCart/>
                             <GlobalLoading/>
                         </BindCurrentContext>
                     </BindProductContext>

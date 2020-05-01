@@ -1,4 +1,4 @@
-import React, {useCallback, useContext, useEffect, useState} from 'react'
+import React, {useCallback, useContext, useEffect, useRef, useState} from 'react'
 import SideBar from './SideBar'
 import Product from './Product'
 import GlobalContext from '../../context/global/GlobalContext'
@@ -72,6 +72,8 @@ function Shop() {
         setGlobalLoading(false)
     }, [query.category_parent_id])
 
+    const timeoutFetchProduct = useRef(null)
+
     useEffect(() => {
         const _query = {
             page: 1,
@@ -81,11 +83,16 @@ function Shop() {
 
         setQuery(_query)
 
-        fetchProduct(_query)
+        if (timeoutFetchProduct.current != null) {
+            clearTimeout(timeoutFetchProduct.current)
+        }
+
+        timeoutFetchProduct.current = setTimeout(() => fetchProduct(_query), 300)
+
     }, [location.search])
 
     useEffect(() => {
-        if(parseInt(query.category_parent_id) > 0) fetchSubCategory()
+        if (parseInt(query.category_parent_id) > 0) fetchSubCategory()
         else {
             setCategoryContext((state) => {
                 return {

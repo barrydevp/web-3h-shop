@@ -7,7 +7,7 @@
 /**/
 /**/
 
-.loading-container{
+.loading-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -15,7 +15,8 @@
     height: 100%;
     background-color: #F8F8F8AD;
 }
-.loading{
+
+.loading {
     left: 40%;
     top: 30%;
     z-index: 1000;
@@ -384,4 +385,42 @@ input[type="submit"]:focus {
             }
         }
     }
+}
+
+.FixedCart.stickcart {
+    position: fixed;
+    right: 70px;
+    bottom: 42px;
+    background: #fff;
+    border-radius: 40px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .15);
+    font-size: 14px;
+    color: #f82e56;
+    padding: 0 10px 0 0;
+    z-index: 99;
+    display: flex;
+    flex-direction: row;
+
+    .icon {
+        margin: 5px 5px;
+        color: #0baf05;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+
+        span {
+            padding: 2px 0 0;
+            white-space: nowrap;
+        }
+
+        strong {
+            white-space: nowrap;
+        }
+    }
+}
+
+a.stickcart:hover {
+    text-decoration: none;
 }

@@ -7,9 +7,13 @@ import GlobalContext from '../../context/global/GlobalContext'
 
 function Cart() {
     const {setGlobalLoading} = useContext(GlobalContext)
-    const {currentContext/*, fetchCurrentOrder*/} = useContext(CurrentContext)
+    const {currentContext, fetchCurrentOrder} = useContext(CurrentContext)
     const {orderId} = currentContext
     const [items, setItems] = useState([])
+
+    useEffect(() => {
+        fetchCurrentOrder()
+    }, [])
 
     const fetchItems = useCallback(async (orderId) => {
         if (!orderId) return
