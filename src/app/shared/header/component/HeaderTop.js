@@ -1,7 +1,16 @@
-import React from 'react'
+import React, {useContext, useMemo} from 'react'
 import {Link} from 'react-router-dom'
+import AuthenticateContext from '../../../context/authenticate/AuthenticateContext'
+import {getUserData} from '../../../../services/AuthServices'
 
 function HeaderTop() {
+    const {authenticateContext} = useContext(AuthenticateContext)
+    const {isAuthenticated} = authenticateContext
+
+    const userData = useMemo(() => {
+        return getUserData()
+    }, [isAuthenticated])
+
     return (
         <div className="HeaderTop header-top-area">
             <div className="container">
@@ -12,10 +21,19 @@ function HeaderTop() {
                         </div>
                     </div>
                     <div className="col-lg-9 col-md-7 col-12">
-                        <ul className="login-register float-right clearfix d-flex flex-md-row flex-column">
-                            <li className="SignIn"><Link to="/login">SIGN IN</Link></li>
-                            <li className="SignUp"><Link to="/signup">SIGN UP</Link></li>
-                        </ul>
+                        {
+                            isAuthenticated ? (
+                                <ul className="login-register float-right clearfix d-flex flex-md-row flex-column">
+                                    <li className="SignIn"><Link to="/">Hello {userData.name || 'NoName'}</Link>
+                                    </li>
+                                    <li className="SignUp"><Link to="/logout">Logout</Link></li>
+                                </ul>) : (
+                                <ul className="login-register float-right clearfix d-flex flex-md-row flex-column">
+                                    <li className="SignIn"><Link to="/login">SIGN IN</Link></li>
+                                    <li className="SignUp"><Link to="/register">SIGN UP</Link></li>
+                                </ul>)
+                        }
+
                     </div>
                 </div>
             </div>

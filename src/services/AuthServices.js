@@ -1,4 +1,5 @@
 import {getLocalData, setLocalData} from './LocalStorageServices'
+import {subscribeGlobalErrorRequest} from './api/createApiServices'
 
 const _store = {
     state: {
@@ -42,7 +43,8 @@ export const setUserId = (userId) => {
 
     _store.user = {
         ..._store.user,
-        updatedUserId,
+        userId: updatedUserId,
+        _id: updatedUserId,
     }
 
     setLocalData('userId', updatedUserId)
@@ -121,7 +123,7 @@ export const logoutUser = (message = '') => {
     // setTimeout(async () => {
     //     await logoutCurrentUser({accessToken, refreshToken, message})
     // }, 0)
-
+    if(message) alert(message)
     setAccessToken('')
     setRefreshToken('')
     setLocalData('user', {})
@@ -160,4 +162,8 @@ export const hasRoles = (...requestRoles) => {
     }
 
     return false
+}
+
+export const subscribeAuth = () => {
+    subscribeGlobalErrorRequest(() => logoutUser("Phiên đăng nhập của bạn đã hết hạn."))
 }

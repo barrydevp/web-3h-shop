@@ -11,25 +11,28 @@ import BindCurrentContext from './app/context/current/BindCurrentContext'
 import GlobalLoading from './app/shared/loading/GlobalLoading'
 import BindGlobalContext from './app/context/global/BindGlobalContext'
 import FixedCart from './app/shared/general/FixedCart'
+import BindAuthenticateContext from './app/context/authenticate/BindAuthenticateContext'
 
 function App() {
     return (
         <div className="App wrapper">
             <BindGlobalContext>
-                <BindCategoryContext>
-                    <BindProductContext>
-                        <BindCurrentContext>
-                            <ScrollToTop/>
-                            <Header/>
-                            <MainApp/>
-                            <General/>
-                            <Contact/>
-                            <Footer/>
-                            <FixedCart/>
-                            <GlobalLoading/>
-                        </BindCurrentContext>
-                    </BindProductContext>
-                </BindCategoryContext>
+                <BindAuthenticateContext>
+                    <BindCategoryContext>
+                        <BindProductContext>
+                            <BindCurrentContext>
+                                <ScrollToTop/>
+                                <Header/>
+                                <MainApp/>
+                                <General/>
+                                <Contact/>
+                                <Footer/>
+                                <FixedCart/>
+                                <GlobalLoading/>
+                            </BindCurrentContext>
+                        </BindProductContext>
+                    </BindCategoryContext>
+                </BindAuthenticateContext>
             </BindGlobalContext>
         </div>
     )
