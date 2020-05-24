@@ -1,7 +1,8 @@
-import React, {useCallback, useContext, useState} from 'react'
+import React, {useCallback, useContext, useEffect, useState} from 'react'
 import {checkoutOrder} from '../../../services/api/OrderServices'
 import GlobalContext from '../../context/global/GlobalContext'
 import CurrentContext from '../../context/current/CurrentContext'
+import {getUserData} from '../../../services/AuthServices'
 
 const _parseCheckout = body => {
     const {customer, note, payment_type} = body
@@ -69,6 +70,17 @@ function BillingDetail(props) {
     const [address, setAddress] = useState('')
     const [email, setEmail] = useState('')
     const [note, setNote] = useState('')
+
+    useEffect(() => {
+        const user = getUserData()
+        // console.log(user)
+        if(!user || !user.name) return
+
+        setFullName(user.name || '')
+        setPhone(user.phone || '')
+        setAddress(user.address || '')
+        setEmail(user.email || '')
+    }, [])
 
     const handleCheckout = useCallback(async (orderId) => {
         if (!orderId) {

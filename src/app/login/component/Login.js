@@ -3,9 +3,11 @@ import {Link} from 'react-router-dom'
 import GlobalContext from '../../context/global/GlobalContext'
 import {authenticate} from '../../../services/api/UserServices'
 import {loginUser, logoutUser} from '../../../services/AuthServices'
+import CurrentContext from '../../context/current/CurrentContext'
 
 function Login() {
     const {setGlobalLoading} = useContext(GlobalContext)
+    const {fetchCurrentOrder} = useContext(CurrentContext)
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
@@ -14,7 +16,7 @@ function Login() {
     }, [])
 
     const handleLogin = useCallback(async (userLogin) => {
-        console.log("alo")
+        // console.log("alo")
         setGlobalLoading(true)
 
         try {
@@ -26,7 +28,7 @@ function Login() {
             const {access_token, user} = data
 
             loginUser({token: access_token, payload: {_id: user._id, role: user.role}, user_data: user})
-
+            fetchCurrentOrder()
         } catch (error) {
             alert(error.message || 'error')
             logoutUser()
