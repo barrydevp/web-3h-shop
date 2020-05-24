@@ -1,6 +1,6 @@
 import createAPIServices from './createApiServices'
 
-const baseUrl = 'https://api-3h-shop.herokuapp.com/users'
+const baseUrl = process.env.NODE_ENV === 'production' ? `https://${process.env.PRIMARY_DOMAIN}/users` : 'http://localhost:4000/users'
 
 const api = createAPIServices({baseUrl})
 
