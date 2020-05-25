@@ -13,7 +13,7 @@ function CartTable(props) {
                     <CartHeader/>
                     <tbody>
                     {items.map((item, i) => {
-                        return <CartRow key={`shopping-cart-table-${i}`} item={item} setItems={props.setItems}/>
+                        return <CartRow key={`shopping-cart-table-${item.order_item._id || i}`} item={item} setItems={props.setItems}/>
                     })}
                     </tbody>
                 </table>

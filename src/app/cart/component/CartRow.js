@@ -28,9 +28,7 @@ function CartRow(props) {
         setLoading(true)
 
         try {
-            const {data, success, message} = await deleteOrderItemById(orderItemId, {
-                quantity: 1,
-            })
+            const {data, success, message} = await deleteOrderItemById(orderItemId)
             if (!success) {
                 throw new Error(message)
             }
@@ -104,7 +102,7 @@ function CartRow(props) {
                 <span>{price}$</span>
             </td>
             <td className="product-quantity">
-                <input onChange={onChangeQuantity(order_item._id)} type="number" step="1" min="0" value={quantity}/>
+                <input onChange={onChangeQuantity(order_item._id)} type="number" step="1" min="1" value={quantity}/>
             </td>
             <td className="product-subtotal">
                 <span>{totalPrice}$</span>
