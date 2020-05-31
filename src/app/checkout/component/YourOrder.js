@@ -1,9 +1,12 @@
 import React, {useMemo} from 'react'
 import PropTypes from 'prop-types'
+import CouponDetail from './CouponDetail'
 
 function YourOrder(props) {
     const {totalPrice, totalOriginalPrice} = useMemo(() => {
-        return props.items.reduce((prev, item) => {
+        const {discount} = {discount: 0, ...props.coupon}
+
+        let {totalPrice, totalOriginalPrice} = props.items.reduce((prev, item) => {
             const {totalPrice, totalOriginalPrice} = item
 
             return {
@@ -11,7 +14,12 @@ function YourOrder(props) {
                 totalOriginalPrice: prev.totalOriginalPrice + totalOriginalPrice
             }
         }, {totalPrice: 0, totalOriginalPrice: 0})
-    }, [props.items])
+
+        return {
+            totalPrice: totalPrice * (100 - discount) / 100,
+            totalOriginalPrice: totalOriginalPrice,
+        }
+    }, [props.items, props.coupon])
 
     return (
         <div className="YourOrder your-order">
@@ -44,7 +52,7 @@ function YourOrder(props) {
                     })}
                     <tr>
                         <td className="product-name order-total">
-                            <strong>Cần thanh toán</strong>
+                            <strong>Cần thanh toán (Đã bao gồm chi phí ship và mã giảm giá)</strong>
                         </td>
                         <td className="product-total order-total">
                             <strong>${Math.round(totalPrice * 100) / 100}</strong>
@@ -60,6 +68,7 @@ function YourOrder(props) {
 
 YourOrder.propTypes = {
     items: PropTypes.array.isRequired,
+    orderId: PropTypes.number.isRequired,
 }
 
 export default YourOrder

@@ -22,6 +22,13 @@ export const getOrderItemByOrderId = (orderId) => {
     })
 }
 
+export const getOrderCoupon = (orderId) => {
+    return api.makeRequest({
+        url: `/${orderId}/coupon`,
+        method: 'get'
+    })
+}
+
 export const insertOrderItem = (orderId, item) => {
     return api.makeRequest({
         url: `/${orderId}/items`,
@@ -35,5 +42,20 @@ export const checkoutOrder = (orderId, item) => {
         url: `/${orderId}/checkout`,
         method: 'post',
         data: item,
+    })
+}
+
+export const applyCoupon = (orderId, data) => {
+    return api.makeRequest({
+        url: `/${orderId}/apply/coupon`,
+        method: 'post',
+        data: data,
+    })
+}
+
+export const removeCoupon = (orderId) => {
+    return api.makeRequest({
+        url: `/${orderId}/remove/coupon`,
+        method: 'post',
     })
 }

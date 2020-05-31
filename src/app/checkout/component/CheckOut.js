@@ -3,13 +3,15 @@ import BillingDetail from './BillingDetail'
 import YourOrder from './YourOrder'
 import GlobalContext from '../../context/global/GlobalContext'
 import CurrentContext from '../../context/current/CurrentContext'
-import {getOrderItemByOrderId} from '../../../services/api/OrderServices'
+import {getOrderItemByOrderId, getOrderCoupon} from '../../../services/api/OrderServices'
+import CouponDetail from './CouponDetail'
 
 function CheckOut() {
     const {setGlobalLoading} = useContext(GlobalContext)
     const {currentContext, fetchCurrentOrder} = useContext(CurrentContext)
     const {orderId} = currentContext
     const [items, setItems] = useState([])
+    const [coupon, setCoupon] = useState(null)
 
     useEffect(() => {
         fetchCurrentOrder()
@@ -33,8 +35,27 @@ function CheckOut() {
         setGlobalLoading(false)
     }, [])
 
+    const fetchOrderCoupon = useCallback(async (orderId) => {
+        if (!orderId) return
+        setGlobalLoading(true)
+        try {
+            const {data, success, message} = await getOrderCoupon(orderId)
+            if (!success) {
+                throw new Error(message)
+            }
+
+            setCoupon(data || null)
+
+        } catch (error) {
+            alert(error.message || 'error')
+        }
+
+        setGlobalLoading(false)
+    }, [])
+
     useEffect(() => {
         fetchItems(orderId)
+        fetchOrderCoupon(orderId)
     }, [orderId])
 
     const _items = useMemo(() => {
@@ -60,7 +81,9 @@ function CheckOut() {
                         </div>
 
                         <div className="col-md-6">
-                            <YourOrder items={_items}/>
+                            <YourOrder orderId={parseInt(orderId)} items={_items} coupon={coupon}
+                                       fetchOrderCoupon={fetchOrderCoupon}/>
+                            <CouponDetail orderId={parseInt(orderId)} coupon={coupon} fetchOrderCoupon={fetchOrderCoupon}/>
                         </div>
                     </div>
                 </div>
