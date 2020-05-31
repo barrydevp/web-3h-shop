@@ -1,9 +1,12 @@
 # [WEB-3H-SHOP](http://web-3h-shop.herokuapp.com/)
+# [ADMIN-3H-SHOP](http://admin-3h-shop.herokuapp.com/)
 
-### 3H-SHOP web client application
+### 3H-SHOP web shop application
+### [3H-SHOP admin dashboard application](https://github.com/barrydevp/admin-3h-shop)
 ### [3H-SHOP web api application](https://github.com/barrydevp/api-3h-shop)
 
 ## Nội Dung
+# [Báo cáo, tài liệu chi tiết (bao gồm thiết kế, mô hình cơ sở dữ liệu, quy trình)](/Nhom12_Bao_cao_du_an_3h_shop.pdf)
 
 - [Giới thiệu](#gioithieu)
 - [Công nghệ](#congnghe)
@@ -25,7 +28,7 @@
 ## Mô tả
 #### Dự án được chia cấu trúc thành 2 phần:
 - Client server và Rest API server
-- Client sử dụng Framework REACTJS làm Single-Page-Application và xử dụng NODEJS làm nển tảng phía server, hoạt động trên cơ chế client-side-rendering
+- Client sử dụng Framework REACTJS làm Single-Page-Application và xử dụng NODEJS làm backend cho web shop và web admin, hoạt động trên cơ chế client-side-rendering
 - Rest API sử dụng thư viện Gin-Gonic của Go
 - Mysql sử dụng dịch vụ của ClearDB
 - Hosting, domain sử dụng dịch vụ PaaS của Heroku
