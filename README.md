@@ -3,10 +3,11 @@
 
 ### 3H-SHOP web shop application
 ### [3H-SHOP admin dashboard application](https://github.com/barrydevp/admin-3h-shop)
+### Admin Login: admin@gmail.com -- admin123456
 ### [3H-SHOP web api application](https://github.com/barrydevp/api-3h-shop)
 
 ## Nội Dung
-# [Báo cáo, tài liệu chi tiết (bao gồm thiết kế, mô hình cơ sở dữ liệu, quy trình)](/Nhom12_Bao_cao_du_an_3h_shop.pdf)
+# [Báo cáo, tài liệu chi tiết (bao gồm thiết kế, mô hình cơ sở dữ liệu, quy trình)](/docs/Nhom12_Bao_cao_du_an_3h_shop.pdf)
 
 - [Giới thiệu](#gioithieu)
 - [Công nghệ](#congnghe)
